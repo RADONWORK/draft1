@@ -1,29 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cluster Scoreboard</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1f1f1f, #3a0d4e, #0f2027);
+      color: #f0f0f0;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #a18cd1, #fbc2eb);
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 12px #a18cd1;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-weight: bold;
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(160,160,255,0.3);
+    }
+    th, td {
+      padding: 12px;
+    }
+    th {
+      background: rgba(255,255,255,0.1);
+      color: #ffd700;
+      text-align: left;
+    }
+    td {
+      text-align: left;
+    }
+    td:last-child {
+      text-align: right;
+    }
+    tr:hover {
+      background: rgba(160,160,255,0.15);
+      box-shadow: 0 0 12px rgba(160,160,255,0.4);
+      transform: translateY(-2px);
+      transition: all 0.3s ease;
+    }
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      th, td {
+        padding: 8px;
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🌌 Cluster Celebration Table</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Cluster</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody id="scoreTable">
+      <!-- Scores will be injected here -->
+    </tbody>
+  </table>
 
-<!-- Live Cluster Scoreboard -->
-<table style="width:100%; border-collapse:collapse; font-weight:bold;">
-  <thead>
-    <tr style="background:rgba(255,255,255,0.1); font-size:1.1em; color:#ffd700;">
-      <th style="padding:12px; text-align:left;">Cluster</th>
-      <th style="padding:12px; text-align:right;">Score</th>
-    </tr>
-  </thead>
-  <tbody id="scoreTable">
-    <!-- Scores will be injected here -->
-  </tbody>
-</table>
-
-<!-- JavaScript to fetch scores from Google Sheets -->
-<script>
-fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRqyZmZS69DhWmFnIocEuEipiQ9fmwTykOuoiv3rBXaYQAh2T_VoTFOnhdcAW8DV2JqN7PaGBvqro1M/pub?output=csv")
-  .then(response => response.text())
-  .then(csv => {
-    const rows = csv.trim().split("\n").slice(1); // skip header
-    const tableBody = document.getElementById("scoreTable");
-    rows.forEach(row => {
-      const [cluster, score] = row.split(",");
-      const tr = document.createElement("tr");
-      tr.innerHTML = `<td style="padding:10px;text-align:left;">${cluster}</td><td style="padding:10px;text-align:right;">${score} pts</td>`;
-      tableBody.appendChild(tr);
-    });
-  });
-</script>
+  <script>
+    fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRqyZmZS69DhWmFnIocEuEipiQ9fmwTykOuoiv3rBXaYQAh2T_VoTFOnhdcAW8DV2JqN7PaGBvqro1M/pub?output=csv")
+      .then(response => response.text())
+      .then(csv => {
+        const rows = csv.trim().split("\n").slice(1); // skip header
+        const tableBody = document.getElementById("scoreTable");
+        rows.forEach(row => {
+          const [cluster, score] = row.split(",").map(cell => cell.trim());
+          if (cluster && score) {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `<td>${cluster}</td><td>${score}</td>`;
+            tableBody.appendChild(tr);
+          }
+        });
+      });
+  </script>
+</body>
+</html>
