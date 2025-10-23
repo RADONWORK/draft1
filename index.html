@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <html lang="">
 
@@ -587,62 +586,9 @@ body > .bee-page-container {padding-bottom:0 !important}
   }
 </style>
 
-
-<!-- ENHANCEMENT: light glass + safe fixes (non-destructive) -->
-<style id="parichay-enhance-css">
-/* keep everything else intact; only add safer overlays and fixes */
-
-/* Prevent stacked background videos — show only the first video inside each container */
-.bee-background-video-container video { display: block !important; }
-.bee-background-video-container video:not(:first-of-type) { display: none !important; }
-
-/* Add a light, muted animated gradient behind existing background content (doesn't remove video) */
-.parichay-light-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -4;
-  pointer-events: none;
-  background: linear-gradient(120deg, rgba(255,250,240,0.55) 0%, rgba(235,245,255,0.45) 50%, rgba(255,248,240,0.5) 100%);
-  filter: saturate(1.03) blur(6px);
-  opacity: 0.95;
-}
-.parichay-light-bg::before{
-  content:""; position:absolute; inset:-30%; background:
-    radial-gradient(circle at 10% 20%, rgba(245,197,24,0.06), transparent 12%),
-    radial-gradient(circle at 90% 80%, rgba(0,212,255,0.04), transparent 10%);
-  transform-origin:center; animation: parichayLightDrift 18s linear infinite;
-}
-@keyframes parichayLightDrift{
-  0%{ transform: translate3d(-2%,0,0) scale(1.02); }
-  50%{ transform: translate3d(2%,0,0) scale(1.03); }
-  100%{ transform: translate3d(-2%,0,0) scale(1.02); }
-}
-
-/* Enhance glass panels slightly but keep original styles */
-.liquid-glass, .glass-filter, .glass-bg, .event-box {
-  -webkit-backdrop-filter: blur(12px) saturate(120%);
-  backdrop-filter: blur(12px) saturate(120%);
-  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms, border-color 200ms;
-  box-shadow: 0 6px 18px rgba(10,12,20,0.18), inset 0 1px 0 rgba(255,255,255,0.015);
-  border-radius: 12px;
-}
-.liquid-glass:hover, .event-box:hover {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 18px 48px rgba(6,10,25,0.28);
-}
-
-/* Accessibility */
-@media (prefers-reduced-motion: reduce){
-  .parichay-light-bg::before { animation: none !important; }
-  .liquid-glass, .event-box { transition: none !important; transform: none !important; }
-}
-</style>
-
 </head>
 
 <body>
-<div class="parichay-light-bg" aria-hidden="true"></div>
-
 	<div class="bee-page-container">
 		<div class="bee-row bee-row-1">
 			<div class="bee-background-video-container"><video autoplay="autoPlay" loop="loop" muted="muted" playsinline="playsInline">
@@ -872,6 +818,30 @@ body > .bee-page-container {padding-bottom:0 !important}
 						<div class="parichay-logo">
 							<img alt="Parichay Logo" src="https://res.cloudinary.com/duslhfphv/image/upload/v1760205040/logo_final.png_COPY_2_RESIZED_dywpug.png" />
 						</div>
+<!-- Countdown Timer Section -->
+<div id="countdown" style="text-align:center; margin: 30px 0; font-family: 'Anton', sans-serif; color: #f5c518;">
+  <h2 style="font-size: 2rem; margin-bottom: 10px;">⏳ Countdown to Parichay Fest 2025</h2>
+  <div id="timer" style="font-size: 2.2rem; letter-spacing: 2px;">Loading...</div>
+</div>
+
+<style>
+#countdown {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  display: inline-block;
+  padding: 20px 40px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1), inset 0 0 10px rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 600px) {
+  #countdown {
+    width: 85%;
+    font-size: 1.4rem;
+    padding: 16px 20px;
+  }
+}
+</style>
 <!-- Points Table Trigger Button -->
 <div style="text-align:center; margin:20px 0; position: relative; z-index: 1001;">
   <button class="glass-button" onclick="openPointsPopup()" style="position: relative; z-index: 1002;">
@@ -2858,84 +2828,7 @@ function filterEvents(searchTerm) {
     });
   }
 </script>
-
-<!-- ENHANCEMENT: category accents + haptics (non-destructive) -->
-<script id="parichay-enhance-js">
-(function(){
-  if(window.__parichay_enhanced) return; window.__parichay_enhanced = true;
-  const mapping = {
-    dance: '#FF6B6B',
-    drama: '#FFD93D',
-    gaming: '#00B8A9',
-    music: '#8E44AD',
-    arts: '#16A085',
-    literary: '#3498DB',
-    business: '#F39C12'
-  };
-  function detectCategoryFromKeywords(kw){
-    if(!kw) return '';
-    const k = kw.toLowerCase();
-    if(k.includes('dance')) return 'dance';
-    if(k.includes('nukkad')||k.includes('street')||k.includes('play')||k.includes('natak')||k.includes('drama')) return 'drama';
-    if(k.includes('bgmi')||k.includes('valorant')||k.includes('gaming')||k.includes('esports')) return 'gaming';
-    if(k.includes('vocal')||k.includes('sing')||k.includes('instrument')||k.includes('music')) return 'music';
-    if(k.includes('fashion')||k.includes('photography')||k.includes('art')||k.includes('design')) return 'arts';
-    if(k.includes('quiz')||k.includes('treasure')||k.includes('literary')||k.includes('writing')) return 'literary';
-    if(k.includes('shark tank')||k.includes('business')||k.includes('entrepreneur')) return 'business';
-    return '';
-  }
-  function safeHexToRgba(hex, a){ if(!hex) return 'rgba(255,255,255,'+a+')'; hex = hex.replace('#',''); const bigint = parseInt(hex,16); const r=(bigint>>16)&255; const g=(bigint>>8)&255; const b=bigint&255; return 'rgba('+r+','+g+','+b+','+a+')'; }
-
-  function applyAccents(){
-    const els = Array.from(document.querySelectorAll('.event-box, .event-card, .bee-block .event-box'));
-    els.forEach(el=>{
-      if(!el) return;
-      // avoid modifying if already modified
-      if(el.dataset.parichayAccentApplied) return;
-      const kw = (el.getAttribute('data-keywords') || el.innerText || '');
-      let cat = (el.getAttribute('data-category') || '').toLowerCase();
-      if(!cat) cat = detectCategoryFromKeywords(kw);
-      const color = mapping[cat] || null;
-      el.dataset.parichayAccentApplied = '1';
-      el.classList.add('parichay-enhanced');
-      if(color){
-        // add left border accent
-        const prevBorder = el.style.borderLeft;
-        el.style.borderLeft = '6px solid ' + color;
-        el.style.boxShadow = '0 10px 30px ' + safeHexToRgba(color,0.08) + ', 0 6px 18px rgba(0,0,0,0.32)';
-        // add tiny label if not present
-        if(!el.querySelector('.parichay-accent-label')){
-          const lbl = document.createElement('div');
-          lbl.className = 'parichay-accent-label';
-          lbl.style.position='absolute'; lbl.style.right='12px'; lbl.style.top='12px'; lbl.style.padding='6px 10px';
-          lbl.style.borderRadius='999px'; lbl.style.fontWeight=700; lbl.style.fontSize='12px';
-          lbl.style.background = color; lbl.style.color='#07121a'; lbl.style.zIndex='3';
-          lbl.innerText = (cat || '').toUpperCase();
-          el.style.position = el.style.position || 'relative';
-          el.appendChild(lbl);
-        }
-      }
-    });
-  }
-
-  // run once DOM ready and also periodically in case dynamic content loads
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', ()=>{ applyAccents(); });
-  } else applyAccents();
-  // fallback re-run after short delay
-  setTimeout(applyAccents, 900);
-
-  // Haptic feedback: mobile vibration on scroll/wheel (throttled)
-  let last = 0; let enabled = true;
-  function tryV(){ if(!enabled) return; if(!('vibrate' in navigator)) return; if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; const now = Date.now(); if(now - last > 140){ try{ navigator.vibrate(10); }catch(e){} last = now; } }
-  window.addEventListener('scroll', ()=> tryV(), {passive:true});
-  window.addEventListener('wheel', ()=> tryV(), {passive:true});
-
-  // expose toggle
-  window.__parichay_toggle_haptics = function(v){ enabled = !!v; };
-})();
-</script>
-
 </body>
 
 </html>
+
