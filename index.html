@@ -818,104 +818,113 @@ body > .bee-page-container {padding-bottom:0 !important}
 						<div class="parichay-logo">
 							<img alt="Parichay Logo" src="https://res.cloudinary.com/duslhfphv/image/upload/v1760205040/logo_final.png_COPY_2_RESIZED_dywpug.png" />
 						</div>
-<!-- Clock Container -->
-<div id="parichayClock" class="clock-glass" onclick="triggerVibration()">
-  <div class="clock-grid">
-    <div class="clock-block">
-      <div class="clock-label">Time</div>
-      <div id="liveTime" class="clock-value">--:--:--</div>
-    </div>
-    <div class="clock-block">
-      <div class="clock-label">Days Left</div>
-      <div id="daysLeft" class="clock-value">--</div>
-    </div>
+<!-- Minimal Countdown Timer (Clean + Emoji Only) -->
+<div id="countdownBox" onclick="triggerVibration()">
+  <div class="countdownRow">
+    <div class="segment"><span id="days">00</span><div>🗓️</div></div>
+    <div class="segment"><span id="hours">00</span><div>⏰</div></div>
+    <div class="segment"><span id="minutes">00</span><div>🕒</div></div>
+    <div class="segment"><span id="seconds">00</span><div>⌛</div></div>
   </div>
 </div>
 
-<!-- Styles -->
 <style>
-.clock-glass {
-  position: relative;
-  z-index: 1002;
-  margin: 40px auto;
-  padding: 20px 28px;
-  max-width: 360px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.1);
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  color: #fff;
-  animation: fadeInClock 1s ease-out;
-  transition: transform 0.2s ease;
-}
-.clock-glass:hover { transform: scale(1.02); }
-
-.clock-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-.clock-block {
-  flex: 1;
-  text-align: center;
-}
-.clock-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #a8f5ff;
-  margin-bottom: 6px;
-}
-.clock-value {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #ffd54f;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-@keyframes fadeInClock {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@media (max-width: 480px) {
-  .clock-grid {
-    flex-direction: column;
-    gap: 12px;
+  #countdownBox {
+    margin: 30px auto;
+    padding: 16px 24px;
+    max-width: 360px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.4), inset 0 0 10px rgba(255,255,255,0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+    z-index: 1002;
+    transition: transform 0.3s ease;
   }
-  .clock-value { font-size: 2rem; }
-}
+  #countdownBox:hover {
+    transform: scale(1.02);
+  }
+
+  .countdownRow {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .segment {
+    background: rgba(0,0,0,0.4);
+    padding: 12px 16px;
+    border-radius: 12px;
+    min-width: 60px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  }
+
+  .segment span {
+    display: block;
+    font-size: 2rem;
+    color: #00eaff;
+    text-shadow: 0 0 15px rgba(0,234,255,0.5);
+  }
+
+  .segment div {
+    font-size: 1.2rem;
+    margin-top: 6px;
+  }
+
+  @media (max-width: 480px) {
+    #countdownBox {
+      padding: 14px 18px;
+      max-width: 92%;
+    }
+    .segment {
+      min-width: 52px;
+      padding: 10px;
+    }
+    .segment span {
+      font-size: 1.6rem;
+    }
+    .segment div {
+      font-size: 1rem;
+    }
+  }
 </style>
 
-<!-- Script -->
 <script>
-const liveTime = document.getElementById("liveTime");
-const daysLeft = document.getElementById("daysLeft");
+  function updateCountdown() {
+    const eventDate = new Date("Nov 7, 2025 00:00:00").getTime();
+    const now = new Date().getTime();
+    const diff = eventDate - now;
 
-// Target date: Nov 7, 2025
-const targetDate = new Date("2025-11-07T00:00:00");
+    if (diff <= 0) {
+      document.getElementById("countdownBox").innerHTML = "<div style='font-size:2.2rem;'>🎉</div>";
+      clearInterval(timerInterval);
+      return;
+    }
 
-function updateClock() {
-  const now = new Date();
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-  // Time
-  const hrs = String(now.getHours()).padStart(2, '0');
-  const mins = String(now.getMinutes()).padStart(2, '0');
-  const secs = String(now.getSeconds()).padStart(2, '0');
-  liveTime.textContent = `${hrs}:${mins}:${secs}`;
+    document.getElementById("days").innerText = days.toString().padStart(2, '0');
+    document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+    document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+    document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+  }
 
-  // Days left
-  const diff = targetDate - now;
-  const totalDays = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
-  daysLeft.textContent = totalDays;
-}
+  function triggerVibration() {
+    if (navigator.vibrate) navigator.vibrate([20, 30, 20]);
+  }
 
-function triggerVibration() {
-  if (navigator.vibrate) navigator.vibrate([20, 30, 20]);
-}
-
-setInterval(updateClock, 1000);
-updateClock();
+  const timerInterval = setInterval(updateCountdown, 1000);
+  updateCountdown();
 </script>
+
 <!-- Search & Filter Bar -->
 <div id="searchContainer" style="text-align: center; margin: 40px 0;">
   <!-- Search Input -->
@@ -2897,6 +2906,7 @@ function filterEvents(searchTerm) {
 </body>
 
 </html>
+
 
 
 
