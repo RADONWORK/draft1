@@ -818,30 +818,129 @@ body > .bee-page-container {padding-bottom:0 !important}
 						<div class="parichay-logo">
 							<img alt="Parichay Logo" src="https://res.cloudinary.com/duslhfphv/image/upload/v1760205040/logo_final.png_COPY_2_RESIZED_dywpug.png" />
 						</div>
-<!-- Countdown Timer Section -->
-<div id="countdown" style="text-align:center; margin: 30px 0; font-family: 'Anton', sans-serif; color: #f5c518;">
-  <h2 style="font-size: 2rem; margin-bottom: 10px;">⏳ Countdown to Parichay Fest 2025</h2>
-  <div id="timer" style="font-size: 2.2rem; letter-spacing: 2px;">Loading...</div>
+<!-- Countdown Timer (Digital Clock Style) -->
+<div id="countdown-container">
+  <h2 class="countdown-title">⏳ Countdown to Parichay Fest 2025</h2>
+  <div id="countdown">
+    <div class="time-box">
+      <span id="days">00</span>
+      <p>Days</p>
+    </div>
+    <div class="time-box">
+      <span id="hours">00</span>
+      <p>Hours</p>
+    </div>
+    <div class="time-box">
+      <span id="minutes">00</span>
+      <p>Minutes</p>
+    </div>
+    <div class="time-box">
+      <span id="seconds">00</span>
+      <p>Seconds</p>
+    </div>
+  </div>
 </div>
 
 <style>
-#countdown {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  display: inline-block;
-  padding: 20px 40px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.1), inset 0 0 10px rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
+/* Countdown Clock Styling */
+#countdown-container {
+  text-align: center;
+  color: #fff;
+  font-family: 'Anton', sans-serif;
+  margin: 40px auto;
 }
 
+.countdown-title {
+  font-size: 2rem;
+  color: #f5c518;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(255,255,255,0.2);
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 20px rgba(255,255,255,0.1), inset 0 0 8px rgba(0,0,0,0.5);
+  border-radius: 14px;
+  padding: 20px 30px;
+  min-width: 90px;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.time-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+}
+
+.time-box span {
+  display: block;
+  font-size: 2.5rem;
+  color: #00eaff;
+  text-shadow: 0 0 20px rgba(0,234,255,0.6);
+  letter-spacing: 2px;
+}
+
+.time-box p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
   #countdown {
-    width: 85%;
-    font-size: 1.4rem;
-    padding: 16px 20px;
+    gap: 15px;
+  }
+  .time-box {
+    padding: 14px 20px;
+    min-width: 70px;
+  }
+  .time-box span {
+    font-size: 1.8rem;
+  }
+  .countdown-title {
+    font-size: 1.6rem;
   }
 }
 </style>
+
+<script>
+function updateCountdown() {
+  const eventDate = new Date("Nov 7, 2025 00:00:00").getTime();
+  const now = new Date().getTime();
+  const diff = eventDate - now;
+
+  if (diff <= 0) {
+    document.getElementById("countdown").innerHTML = "<h2>🎉 The Fest Has Begun!</h2>";
+    clearInterval(timerInterval);
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerText = days.toString().padStart(2, '0');
+  document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+  document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+  document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+}
+
+const timerInterval = setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
 <!-- Points Table Trigger Button -->
 <div style="text-align:center; margin:20px 0; position: relative; z-index: 1001;">
   <button class="glass-button" onclick="openPointsPopup()" style="position: relative; z-index: 1002;">
@@ -2831,4 +2930,5 @@ function filterEvents(searchTerm) {
 </body>
 
 </html>
+
 
