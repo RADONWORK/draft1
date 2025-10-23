@@ -1,96 +1,2810 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cluster Scoreboard</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #1f1f1f, #3a0d4e, #0f2027);
-      color: #f0f0f0;
+	<!-- Site Title -->
+<title>Parichay Fest 2025 – RNS Institute of Technology</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/duslhfphv/image/upload/v1760205040/logo_final.png_COPY_2_RESIZED_dywpug.png">
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/duslhfphv/image/upload/v1760205040/logo_final.png_COPY_2_RESIZED_dywpug.png">
+
+<!-- Primary Meta Tags -->
+<meta name="description" content="Join us for Parichay Fest 2025 at RNSIT! Featuring Group Dance, Nukkad Natak, and 30+ events. Register now and be part of the celebration.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Open Graph (WhatsApp, Instagram, Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Parichay Fest 2025 – RNS Institute of Technology">
+<meta property="og:description" content="Join us for Parichay Fest 2025 at RNSIT! Featuring Group Dance, Nukkad Natak, and 30+ events. Register now and be part of the celebration.">
+<meta property="og:url" content="https://parichay-2025.pages.dev/">
+<meta property="og:image" content="https://res.cloudinary.com/duslhfphv/image/upload/v1760207372/cat_logoes_2025___NN_20250918_111315_0000_zfuv2x.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<link rel="canonical" href="https://parichay-2025.pages.dev/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Parichay Fest 2025 – RNS Institute of Technology">
+<meta name="twitter:description" content="Join us for Parichay Fest 2025 at RNSIT! Featuring Group Dance, Nukkad Natak, and 30+ events. Register now and be part of the celebration.">
+<meta name="twitter:image" content="https://res.cloudinary.com/duslhfphv/image/upload/v1760205040/logo_final.png_COPY_2_RESIZED_dywpug.png">
+	<style>
+		* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  overflow-x: hidden;
+}
+.liquid-glass {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4), inset 0 0 12px rgba(255,255,255,0.05);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+.liquid-glass:hover {
+  box-shadow: 0 0 20px rgba(255,255,255,0.2), 0 0 30px rgba(0,255,255,0.2);
+}
+
+.liquid-glass {
+  background: linear-gradient(135deg, rgba(20,20,20,0.6), rgba(40,40,40,0.4));
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4), inset 0 0 12px rgba(255,255,255,0.05);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+.liquid-glass:hover {
+  box-shadow: 0 0 20px rgba(255,255,255,0.2), 0 0 30px rgba(0,255,255,0.2);
+}
+
+.glass-filter {
+  padding: 8px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2), inset 0 0 6px rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+  appearance: none;
+  text-align: center;
+  min-width: 100px;
+  max-width: 140px;
+}
+.glass-filter:hover {
+  box-shadow: 0 0 10px rgba(255,255,255,0.2), 0 0 16px rgba(0,255,255,0.2);
+  transform: scale(1.03);
+}
+.glass-filter option {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+#searchInput:hover {
+  box-shadow: 0 0 16px rgba(255,255,255,0.2);
+  transform: scale(1.01);
+}
+@media (max-width: 480px) {
+  .glass-filter {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+}
+
+		.bee-row,
+		.bee-row-content {
+			position: relative
+		}
+
+		.bee-row-1,
+		.bee-row-1 .bee-row-content {
+			background-size: auto;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-2,
+		body {
+			background-color: transparent;
+		}
+
+		.bee-row-1,
+		.bee-row-1 .bee-row-content,
+		.bee-row-2,
+		.bee-row-2 .bee-row-content {
+			background-repeat: no-repeat
+		}
+
+		.bee-html-block {
+			text-align: center
+		}
+
+		body {
+			color: #000000;
+			font-family: Arial, Helvetica, sans-serif
+		}
+
+		.bee-page-container {
+			background-image: url("https://54085c3b83.imgdist.com/pub/bfra/miczdxvn/xlk/zxi/w36/22y%20of%20Copy%20of%20Parichay%202025%20Brochure.png")
+		}
+
+		a {
+			color: #7747FF
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		h3,
+		h4,
+		p {
+			margin: 0
+		}
+
+		.bee-row-content {
+			max-width: 1280px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.bee-row-content .bee-col-w12 {
+			flex-basis: 100%
+		}
+
+		.bee-background-video-container {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			pointer-events: none
+		}
+
+		.bee-background-video-container video {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100vw;
+			height: 56.25vw;
+			min-height: 100vh;
+			min-width: 177.77vh
+		}
+
+		.bee-icon .bee-icon-label-right a {
+			text-decoration: none
+		}
+
+		.bee-divider {
+			overflow: auto
+		}
+
+		.bee-divider .center {
+			margin: 0 auto
+		}
+
+		.bee-divider .right {
+			float: right
+		}
+
+		.bee-icon {
+			display: inline-block;
+			vertical-align: middle
+		}
+
+		.bee-icon .bee-content {
+			display: flex;
+			align-items: center
+		}
+
+		@media (max-width:768px) {
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+		}
+
+		.bee-row-1 {
+			background-image: url('https://54085c3b83.imgdist.com/pub/bfra/miczdxvn/xlk/zxi/w36/22y%20of%20Copy%20of%20Parichay%202025%20Brochure.png')
+		}
+
+		.bee-row-1 .bee-row-content {
+			color: #000000
+		}
+
+		.bee-row-1 .bee-col-1,
+		.bee-row-2 .bee-col-1 {
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-2 {
+			padding: 10px
+		}
+
+		.bee-row-2 .bee-row-content {
+			color: #000000
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-1 {
+			color: #1e0e4b;
+			font-family: Inter, sans-serif;
+			font-size: 15px;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			text-align: center
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-1 .bee-icon-image {
+			padding: 5px 6px 5px 5px
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
+			margin-left: 0
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-1 .bee-icon-label a {
+			color: #1e0e4b
+		}
+	</style>
+
+<style>
+/* --- Overrides to ensure the background video/image covers and is centered --- */
+html, body {
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a) !important;
+  overflow-x: hidden !important;
+}
+
+/* Ensure the main container fills viewport */
+.bee-page-container {
+  min-height: 100vh !important;
+  height: 100% !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Make the video truly cover the viewport and stay centered */
+.bee-background-video-container {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
+
+.bee-background-video-container video {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  object-fit: cover !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+/* Remove unexpected black margins at the bottom by ensuring page content does not create extra height */
+body > .bee-page-container > .bee-row-content {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Ensure no stray body styles from embedded fragments override the layout */
+body * {
+  box-sizing: border-box;
+}
+
+/* Keep glass background behind content */
+.glass-bg { z-index: 0 !important; }
+</style>
+
+
+<style>
+/* --- Animation & Interaction Styles (Gen-Z modern, no glow) --- */
+
+/* Smooth default transitions */
+* { transition: all 250ms cubic-bezier(.2,.9,.2,1); -webkit-tap-highlight-color: transparent; }
+
+/* Ensure smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Parallax background layer: we'll move .bee-background-video-container via JS */
+.bee-background-video-container { will-change: transform; }
+
+/* Event card hover: subtle lift and scale */
+.event-box {
+  transform-origin: center;
+  transition: transform 300ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms;
+  will-change: transform;
+}
+.event-box:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+
+/* Register button micro-interaction */
+.register-btn {
+  transform-origin: center;
+  transition: transform 160ms cubic-bezier(.2,.9,.2,1);
+}
+.register-btn:active { transform: scale(0.98) translateY(1px); }
+
+/* Popup subtle entrance */
+.popup { opacity: 0; transform: translateY(12px) scale(0.995); transition: transform 300ms cubic-bezier(.2,.9,.2,1), opacity 300ms; }
+.popup.open { opacity: 1; transform: translateY(0) scale(1); }
+
+/* Scroll-in animation for event boxes */
+.event-box[data-animated="false"] { opacity: 0; transform: translateY(24px) scale(0.995); }
+.event-box[data-animated="true"] { opacity: 1; transform: translateY(0) scale(1); transition: transform 600ms cubic-bezier(.2,.9,.2,1), opacity 600ms; }
+
+/* Slight stagger container */
+.event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; align-items: start; }
+
+/* Make popup overlay center properly on smaller screens */
+.popup-overlay { display: none; align-items: center; justify-content: center; padding: 20px; }
+
+/* Reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  .event-box:hover { transform: none !important; box-shadow: none !important; }
+}
+
+/* Parallax subtle brightness shift (no glow) */
+.parallax-shift { filter: brightness(0.98); transition: filter 600ms; }
+</style>
+
+
+<!-- NIRVANA: Gen-Z loader & background styles (injected) -->
+<style>
+/* Nirvana loader & background overrides */
+#nirvana-bg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+#nirvana-bg video{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:100%;min-height:100%;width:auto;height:auto;object-fit:cover;opacity:0;transition:opacity 1000ms ease, transform 1000ms ease}
+#nirvana-bg .vid-front{z-index:-1}
+#nirvana-bg .vid-mid{z-index:-2}
+#nirvana-bg .vid-back{z-index:-3}
+#nirvana-overlay { background: transparent !important; }
+body{overscroll-behavior-y:contain}
+body, html {height:100%}
+body > .bee-page-container {position:relative;z-index:1}
+
+/* Loader */
+#nirvana-loader{position:fixed;inset:0;z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(1200px 400px at 10% 10%, rgba(119,71,255,0.08), transparent), linear-gradient(180deg,#06060a,#000000);color:#fff;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;gap:14px}
+#nirvana-title{font-family:Anton, sans-serif;font-size:42px;letter-spacing:2px;color:#ffd54f;text-shadow:0 6px 24px rgba(119,71,255,0.08)}
+#nirvana-sub{opacity:0.9;font-weight:600}
+#nirvana-bar{width:68vw;max-width:520px;height:14px;background:rgba(255,255,255,0.06);border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+#nirvana-fill{height:100%;width:0%;background:linear-gradient(90deg,#7747FF,#f5c518,#00d4ff);border-radius:12px;transform-origin:left;transition:width 220ms linear}
+#nirvana-graphic{width:84px;height:84px;transform-style:preserve-3d;display:block}
+
+/* mobile tweaks */
+@media (max-width:480px){
+  #nirvana-title{font-size:28px}
+  #nirvana-bar{width:82vw;height:12px}
+  #nirvana-graphic{width:56px;height:56px}
+}
+
+/* Remove stray footer gap */
+body > .bee-page-container {padding-bottom:0 !important}
+</style>
+<!-- Points Table Popup Styles -->
+<!-- Points Table Popup Styles -->
+<style>
+  /* Apple‑inspired trigger button */
+  .glass-button {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08); /* subtle frosted look */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25),
+                inset 0 0 0 0.5px rgba(255,255,255,0.4);
+    transition: all 0.25s ease;
+  }
+  .glass-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3),
+                inset 0 0 0 0.5px rgba(255,255,255,0.5);
+  }
+  .glass-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25),
+                inset 0 0 0 0.5px rgba(255,255,255,0.4);
+  }
+
+  /* Popup overlay */
+  .popup-overlay {
+    position: fixed; inset: 0;
+    display: none; place-items: center;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+  .popup-overlay.active { display: grid; }
+
+  /* Popup content */
+  .popup-content {
+    width: 90%;
+    max-width: 480px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(20,20,20,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    padding: 24px;
+    color: #fff;
+    font-weight: 500;
+    animation: popupIn 0.35s ease-out;
+  }
+  @keyframes popupIn {
+    from { transform: scale(0.96) translateY(10px); opacity: 0; }
+    to   { transform: scale(1) translateY(0); opacity: 1; }
+  }
+
+  /* Headings */
+  .popup-content h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+  .tagline {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #a8f5ff;
+    margin-bottom: 1rem;
+  }
+
+  /* Star blocks */
+  .star-block {
+    background: rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .star-block h3 {
+    text-align: center;
+    color: #00f0ff;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; }
+  th, td {
+    padding: 0.6rem;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .rank-line { display: flex; align-items: center; gap: 8px; }
+
+  /* Medals */
+  .medal {
+    font-size: 1.4rem;
+    display: inline-block;
+    animation: floatMedal 2.5s ease-in-out infinite;
+  }
+  @keyframes floatMedal {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
+  }
+
+  /* Close button styled like Apple secondary button */
+  .close-btn {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.9rem;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  .close-btn:hover {
+    background: rgba(255,255,255,0.18);
+    transform: translateY(-1px);
+  }
+  .close-btn:active {
+    transform: scale(0.98);
+  }
+
+  /* Mobile tweaks */
+  @media (max-width: 600px) {
+    .popup-content {
+      width: 95%;
+      max-width: none;
+      font-size: 1rem;
+      padding: 1.2rem;
+      max-height: 90vh;
     }
-    h1 {
-      text-align: center;
-      font-size: 2em;
-      font-weight: bold;
-      margin-bottom: 20px;
-      background: linear-gradient(to right, #a18cd1, #fbc2eb);
-      -webkit-background-clip: text;
-      color: transparent;
-      text-shadow: 0 0 12px #a18cd1;
+    .popup-content h2 { font-size: 1.3rem; }
+    .star-block h3 { font-size: 1rem; }
+    th, td { font-size: 0.9rem; }
+  }
+</style>
+<!-- Points Table Popup Mobile Overrides -->
+<style>
+  @media (max-width: 600px) {
+    .popup-content {
+      width: 95%;       /* stretch wider on phones */
+      max-width: none;  /* remove desktop cap */
+      font-size: 1rem;  /* bump text size */
+      padding: 1.2rem;  /* more breathing room */
+      max-height: 90vh; /* taller on mobile */
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-weight: bold;
-      background: rgba(255,255,255,0.08);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 12px rgba(160,160,255,0.3);
+    .popup-content h2 {
+      font-size: 1.4rem;
+    }
+    .star-block h3 {
+      font-size: 1.1rem;
     }
     th, td {
-      padding: 12px;
+      font-size: 0.95rem;
     }
-    th {
-      background: rgba(255,255,255,0.1);
-      color: #ffd700;
-      text-align: left;
-    }
-    td {
-      text-align: left;
-    }
-    td:last-child {
-      text-align: right;
-    }
-    tr:hover {
-      background: rgba(160,160,255,0.15);
-      box-shadow: 0 0 12px rgba(160,160,255,0.4);
-      transform: translateY(-2px);
-      transition: all 0.3s ease;
-    }
-    @media screen and (max-width: 600px) {
-      h1 {
-        font-size: 1.5em;
-      }
-      th, td {
-        padding: 8px;
-        font-size: 0.95em;
-      }
-    }
-  </style>
-</head>
-<body>
-  <h1>🌌 Cluster Celebration Table</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Cluster</th>
-        <th>Score</th>
-      </tr>
-    </thead>
-    <tbody id="scoreTable">
-      <!-- Scores will be injected here -->
-    </tbody>
-  </table>
+  }
+</style>
 
-  <script>
-    fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRqyZmZS69DhWmFnIocEuEipiQ9fmwTykOuoiv3rBXaYQAh2T_VoTFOnhdcAW8DV2JqN7PaGBvqro1M/pub?output=csv")
-      .then(response => response.text())
-      .then(csv => {
-        const rows = csv.trim().split("\n").slice(1); // skip header
-        const tableBody = document.getElementById("scoreTable");
-        rows.forEach(row => {
-          const [cluster, score] = row.split(",").map(cell => cell.trim());
-          if (cluster && score) {
-            const tr = document.createElement("tr");
-            tr.innerHTML = `<td>${cluster}</td><td>${score}</td>`;
-            tableBody.appendChild(tr);
-          }
-        });
+</head>
+
+<body>
+	<div class="bee-page-container">
+		<div class="bee-row bee-row-1">
+			<div class="bee-background-video-container"><video autoplay="autoPlay" loop="loop" muted="muted" playsinline="playsInline">
+					<source src="https://54085c3b83.imgdist.com/pub/bfra/miczdxvn/ure/nnv/74w/Animated_Webpage_Waves_Background.mp4" type="video/mp4" />
+				</video></div>
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-html-block">
+						<!DOCTYPE html>
+
+						<meta charset="utf-8" />
+						<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+						<title>Parichay Fest Branding</title>
+						<link href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap" rel="stylesheet" />
+						<style>
+							body {
+								margin: 0;
+								background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+								font-family: Arial, sans-serif;
+								position: relative;
+								overflow-x: hidden;
+							}
+
+							/* Glassmorphic Overlay */
+							.glass-bg {
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								backdrop-filter: blur(12px);
+								background: rgba(255, 255, 255, 0.04);
+								z-index: -1;
+							}
+
+							.glass-bg::before {
+								content: "";
+								position: absolute;
+								top: -50%;
+								left: -50%;
+								width: 200%;
+								height: 200%;
+								background: radial-gradient(circle at center, rgba(255, 255, 255, 0.08), transparent 70%);
+								animation: shimmerMove 12s linear infinite;
+							}
+
+							@keyframes shimmerMove {
+								0% {
+									transform: rotate(0deg);
+								}
+
+								100% {
+									transform: rotate(360deg);
+								}
+							}
+
+							/* Logo Strip */
+							.logo-strip {
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								gap: 5%;
+								padding: 12px 20px;
+								overflow: hidden;
+							}
+
+							.logo-strip img {
+								opacity: 0;
+								transform: translateY(5px) scale(0.95);
+								animation: fadeUp 0.8s ease-out forwards;
+								height: auto;
+							}
+
+							.logo-strip img.side {
+								width: 18vw;
+								max-width: 140px;
+								min-width: 60px;
+								border-radius: 6px;
+							}
+
+							.logo-strip img.center {
+								width: 28vw;
+								max-width: 260px;
+								min-width: 100px;
+								border-radius: 10px;
+							}
+
+							.logo-strip img:nth-child(1) {
+								animation-delay: 0.2s;
+							}
+
+							.logo-strip img:nth-child(2) {
+								animation-delay: 0.4s;
+							}
+
+							.logo-strip img:nth-child(3) {
+								animation-delay: 0.6s;
+							}
+
+							@keyframes fadeUp {
+								to {
+									opacity: 1;
+									transform: translateY(0) scale(1);
+								}
+							}
+
+							/* Nirvana Word */
+							.middle-text {
+								text-align: center;
+								font-size: 3rem;
+								font-family: 'Anton', sans-serif;
+								letter-spacing: 1px;
+								margin: 10px 0 6px;
+								color: #f5c518;
+								text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+								animation: fadeInText 1.2s ease-out forwards;
+								opacity: 0;
+							}
+
+							@keyframes fadeInText {
+								from {
+									opacity: 0;
+									transform: translateY(10px);
+								}
+
+								to {
+									opacity: 1;
+									transform: translateY(0);
+								}
+							}
+
+							/* Parichay Logo */
+							.parichay-logo {
+								width: 100%;
+								text-align: center;
+								padding: 20px 20px 32px;
+							}
+
+							.parichay-logo img {
+								width: 60vw;
+								max-width: 440px;
+								min-width: 140px;
+								height: auto;
+								opacity: 0;
+								animation: glitchFade 2.2s ease-out forwards;
+								display: block;
+								margin-left: auto;
+								margin-right: auto;
+							}
+
+							@keyframes glitchFade {
+								0% {
+									opacity: 0;
+									transform: scale(0.9);
+									filter: blur(3px);
+								}
+
+								25% {
+									opacity: 0.4;
+									transform: scale(1.05) translateX(-2px);
+									filter: contrast(1.2);
+								}
+
+								50% {
+									transform: scale(0.98) translateX(2px);
+									filter: contrast(0.8);
+								}
+
+								75% {
+									transform: scale(1.02);
+									filter: blur(0.5px);
+								}
+
+								100% {
+									opacity: 1;
+									transform: scale(1);
+									filter: none;
+								}
+							}
+
+							/* Responsive Tweaks */
+							@media (max-width: 600px) {
+								.logo-strip {
+									gap: 6%;
+									padding: 8px;
+								}
+
+								.logo-strip img.side {
+									width: 22vw;
+									max-width: 100px;
+								}
+
+								.logo-strip img.center {
+									width: 36vw;
+									max-width: 180px;
+								}
+
+								.parichay-logo img {
+									width: 72vw;
+									max-width: 360px;
+									margin-left: auto;
+									margin-right: auto;
+									display: block;
+								}
+
+								.middle-text {
+									font-size: 2.4rem;
+									margin: 8px 0 4px;
+								}
+
+								.parichay-logo {
+									padding: 16px 16px 28px;
+								}
+							}
+						</style>
+						<!-- Glass Background -->
+						<div class="glass-bg"></div>
+						<!-- Logo Strip -->
+						<div class="logo-strip">
+							<img alt="Logo 1" class="side" src="https://res.cloudinary.com/duslhfphv/image/upload/v1760207372/RNS_LOGO_BLACK_lt1usd.png" />
+							<img alt="Logo 3" class="center" src="https://res.cloudinary.com/duslhfphv/image/upload/v1760207373/RNSIT_Header_Nobg_apapg6.png" />
+							<img alt="Logo 2" class="side" src="https://res.cloudinary.com/duslhfphv/image/upload/v1760207372/Dr._RN_Shetty_white_navwoo.png" />
+						</div>
+						<!-- Nirvana Word -->
+						<div class="middle-text">NIRVANA</div>
+						<!-- Parichay Logo -->
+						<div class="parichay-logo">
+							<img alt="Parichay Logo" src="https://res.cloudinary.com/duslhfphv/image/upload/v1760205040/logo_final.png_COPY_2_RESIZED_dywpug.png" />
+						</div>
+<!-- Points Table Trigger Button -->
+<div style="text-align:center; margin:20px 0; position: relative; z-index: 1001;">
+  <button class="glass-button" onclick="openPointsPopup()" style="position: relative; z-index: 1002;">
+    🎯 Scoring Guide
+  </button>
+</div>
+
+						
+<!-- Search & Filter Bar -->
+<div id="searchContainer" style="text-align: center; margin: 40px 0;">
+  <!-- Search Input -->
+  <div class="liquid-glass" style="position: relative; display: inline-block; width: 80%; max-width: 420px;">
+    <input type="text" id="searchInput" placeholder="Search events..." 
+      style="padding: 12px 40px 12px 20px; font-size: 16px; font-weight: bold; width: 100%; border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.3); background: linear-gradient(135deg, rgba(20,20,20,0.6), rgba(40,40,40,0.4));
+      color: white; backdrop-filter: blur(10px); box-shadow: 0 8px 20px rgba(0,0,0,0.4); outline: none;
+      transition: all 300ms ease;">
+    <span style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+      color: white; font-size: 18px; pointer-events: none;">🔍</span>
+  </div>
+
+  <!-- Filters -->
+  <br><br>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+    <select id="dateFilter" class="glass-filter">
+      <option value="">🎯 All Dates</option>
+	  <option value="Nov 5, 2025">Nov 5, 2025</option>
+      <option value="Nov 7, 2025">Nov 7, 2025</option>
+      <option value="Nov 8, 2025">Nov 8, 2025</option>
+    </select>
+
+    <select id="timeFilter" class="glass-filter">
+      <option value="">⏰ All Times</option>
+      <option value="10:00 AM">10:00 AM</option>
+      <option value="11:00 AM">11:00 AM</option>
+      <option value="12:00 PM">12:00 PM</option>
+      <option value="2:00 PM">2:00 PM</option>
+      <option value="3:00 PM">3:00 PM</option>
+    </select>
+
+    <select id="feeFilter" class="glass-filter">
+      <option value="">💸 All Fees</option>
+      <option value="100">Under ₹100</option>
+      <option value="200">Under ₹200</option>
+      <option value="500">Under ₹500</option>
+      <option value="1000">Under ₹1000</option>
+    </select>
+
+    <select id="eventSelector" class="glass-filter">
+      <option value="">📋 Select Event</option>
+      <option value="Group Dance">Group Dance</option>
+      <option value="Solo Dance">Solo Dance</option>
+      <option value="Nukkad Natak">Nukkad Natak</option>
+      <option value="Fashion Show">Fashion Show</option>
+      <option value="BGMI">BGMI</option>
+      <option value="Valorant">Valorant</option>
+      <option value="Treasure Hunt">Treasure Hunt</option>
+      <option value="Photography">Photography</option>
+      <option value="Singing">Singing</option>
+      <option value="Open Mic">Open Mic</option>
+    </select>
+
+    <button onclick="resetFilters()" class="glass-filter" style="padding: 10px 14px; font-weight: bold;">
+      🧹 Reset<br><span style="font-size: 10px; opacity: 0.8;">Reset Filters</span>
+    </button>
+  </div>
+</div>
+
+
+					</div>
+					<div class="bee-block bee-block-2 bee-divider">
+						<div class="center bee-separator" style="border-top:1px solid #dddddd;width:100%;"></div>
+					</div>
+					<div class="bee-block bee-block-3 bee-html-block">
+						<!DOCTYPE html>
+
+						<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+						<style>
+							body {
+								margin: 0;
+								padding: 20px;
+								background: url('your-nirvana-background.jpg') no-repeat center center fixed;
+								background-size: cover;
+								font-family: 'Segoe UI', sans-serif;
+								color: #fff;
+							}
+							.event-box {
+								background: rgba(255, 255, 255, 0.08);
+								border-radius: 16px;
+								padding: 16px;
+								margin-bottom: 20px;
+								box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+								backdrop-filter: blur(12px);
+								border: 2px solid rgba(255, 255, 255, 0.4);
+								outline: 1px solid rgba(255, 255, 255, 0.2);
+								cursor: pointer;
+								transition: transform 0.2s ease;
+							}
+
+							.event-box:hover {
+								transform: scale(1.02);
+							}
+
+							.event-box h3 {
+								margin: 0 0 8px;
+								font-size: 22px;
+								font-weight: bold;
+								color: #ffffff;
+							}
+
+							.event-box p {
+								margin: 4px 0;
+								font-size: 14px;
+							}
+
+							.register-btn {
+								margin-top: 12px;
+								background: #00f2fe;
+								color: #000;
+								padding: 10px 14px;
+								border: none;
+								border-radius: 8px;
+								font-weight: bold;
+								font-size: 14px;
+								cursor: pointer;
+								box-shadow: 0 0 8px #00f2fe;
+								width: 100%;
+							}
+
+							.popup-overlay {
+								display: none;
+								position: fixed;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								background: rgba(0, 0, 0, 0.6);
+								backdrop-filter: blur(10px);
+								z-index: 999;
+								justify-content: center;
+								align-items: center;
+								animation: fadeIn 0.4s ease forwards;
+							}
+
+							.popup {
+								background: rgba(255, 255, 255, 0.12);
+								border-radius: 16px;
+								padding: 20px;
+								width: 90%;
+								max-width: 360px;
+								color: #fff;
+								backdrop-filter: blur(30px);
+								box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+								border: 2px solid rgba(255, 255, 255, 0.5);
+								outline: 1px solid rgba(255, 255, 255, 0.3);
+								animation: slideUp 0.4s ease forwards;
+								max-height: 80vh;
+								overflow-y: auto;
+								text-align: left;
+							}
+
+							.popup h4 {
+								margin-top: 0;
+								font-size: 18px;
+							}
+
+							.popup p {
+								font-size: 14px;
+								line-height: 1.5;
+								margin-bottom: 8px;
+							}
+
+							.popup-buttons {
+								margin-top: 16px;
+								display: flex;
+								flex-direction: column;
+								gap: 10px;
+							}
+
+							.popup-buttons button {
+								padding: 10px;
+								border: none;
+								border-radius: 8px;
+								font-weight: bold;
+								font-size: 14px;
+								cursor: pointer;
+							}
+
+							.continue-btn {
+								background: #00f2fe;
+								color: #000;
+								box-shadow: 0 0 8px #00f2fe;
+							}
+
+							.close-btn {
+								background: #ff4d6d;
+								color: #fff;
+							}
+
+							@keyframes fadeIn {
+								from {
+									opacity: 0;
+								}
+
+								to {
+									opacity: 1;
+								}
+							}
+
+							@keyframes slideUp {
+								from {
+									transform: translateY(40px);
+									opacity: 0;
+								}
+
+								to {
+									transform: translateY(0);
+									opacity: 1;
+								}
+							}
+						</style>
+						<!-- Event Box with Search Keywords -->
+						<div class="event-box" data-keywords="group dance choreography crew western contemporary" onclick="openPopup('popup-groupdance')">
+							<h3>Group Dance</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 2:00 PM</p>
+							<p><strong>Fee:</strong> ₹500</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-groupdance')">Register Now</button>
+						</div>
+						<!-- Popup -->
+						<div class="popup-overlay" id="popup-groupdance">
+							<div class="popup">
+								<h4>Group Dance – Event Details</h4>
+								<p><strong>Theme:</strong> Bring your crew together and set the stage on fire! Groove, spin, and tell a story with every move.</p>
+								<p><strong>Rules:</strong><br />
+									• Time limit incl. setup: 5+2 min<br />
+									• Western or Contemporary styles<br />
+									• Submit music 1 day prior<br />
+									• No powder, fire, water, smoke<br />
+									• Team size: 6–12 members<br />
+									• No vulgarity in songs or attire<br />
+									• Judges' decision is final
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹5000<br />
+									2nd: ₹3000
+								</p>
+								<p><strong>Venue:</strong> Main Stage</p>
+								<p><strong>Contacts:</strong><br />
+									Rakshith – 9880747387<br />
+									Medha Sanjeev – 7892006961
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-groupdance')">Close</button>
+								</div>
+							</div>
+						</div>
+						
+<script>
+function openPopup(id) {
+  const popup = document.getElementById(id);
+  if (popup) popup.style.display = 'flex';
+}
+
+function closePopup(id) {
+  const popup = document.getElementById(id);
+  if (popup) {
+    popup.style.animation = 'fadeOut 0.3s ease forwards';
+    setTimeout(() => {
+      popup.style.display = 'none';
+      popup.style.animation = 'fadeIn 0.4s ease forwards';
+    }, 300);
+  }
+}
+
+// Optional: Search filter logic
+function filterEvents(searchTerm) {
+  const boxes = document.querySelectorAll('.event-box');
+  boxes.forEach(box => {
+    const keywords = box.getAttribute('data-keywords') || '';
+    box.style.display = keywords.toLowerCase().includes(searchTerm.toLowerCase()) ? 'block' : 'none';
+  });
+}
+</script>
+
+					</div>
+					<div class="bee-block bee-block-4 bee-html-block">
+						<div class="event-box" data-keywords="nukkad natak street play drama social awareness hindi kannada english" onclick="openPopup('popup-nukkadnatakstreetplay')">
+							<h3>NUKKAD NATAK (STREET PLAY)</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 11:30 AM</p>
+							<p><strong>Fee:</strong> ₹500</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-nukkadnatakstreetplay')">Register Now</button>
+						</div>
+						<div class="popup-overlay" id="popup-nukkadnatakstreetplay">
+							<div class="popup">
+								<h4>Nukkad Natak – Event Details</h4>
+								<p><strong>Theme:</strong> Take the streets to the stage! Share powerful stories, spark awareness, and entertain with energy, emotion, and creativity.</p>
+								<p><strong>Rules:</strong><br />
+									• Theme: Social awareness<br />
+									• Judging: Script quality, originality, performance, coordination, execution<br />
+									• Time limit: 12 min (10+2) with warning and final bells<br />
+									• Props: Bring your own<br />
+									• No recorded audio/video<br />
+									• No vulgar or offensive content<br />
+									• Live instruments allowed: djembe, drum, clap box<br />
+									• Languages: Kannada, English, Hindi<br />
+									• Script submission: 1 week in advance<br />
+									• Team size: Max 10+2 members
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹5000<br />
+									2nd: ₹3000
+								</p>
+								<p><strong>Venue:</strong> Basketball Court</p>
+								<p><strong>Contacts:</strong><br />
+									Ankit – 9301958842<br />
+									Kushi – 9606851816
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-nukkadnatakstreetplay')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-5 bee-html-block"><!-- Event Block: Fashion Show -->
+						<div class="event-box" data-keywords="fashion show ramp walk style costume choreography" onclick="openPopup('popup-fashionshow')">
+							<h3>Fashion Show</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 3:00 PM</p>
+							<p><strong>Fee:</strong> ₹1000</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-fashionshow')">Register Now</button>
+						</div>
+						<!-- Popup: Fashion Show -->
+						<div class="popup-overlay" id="popup-fashionshow">
+							<div class="popup">
+								<h4>Fashion Show – Event Details</h4>
+								<p><strong>Theme:</strong> Strut, pose, and dazzle like a star! Walk the ramp with style and flair, showing off creativity, costume, and confidence.</p>
+								<p><strong>Rules:</strong><br />
+									• Judging: Theme integration, creativity, choreography, overall presentation<br />
+									• No vulgarity allowed<br />
+									• No gender restriction on team<br />
+									• Shoes compulsory for boys, heels for girls<br />
+									• Time limit: 8+2 min<br />
+									• Team size: 10+2<br />
+									• No water, fire, smoke, or similar elements
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹10,000<br />
+									2nd: ₹6000
+								</p>
+								<p><strong>Venue:</strong> Main Stage</p>
+								<p><strong>Contacts:</strong><br />
+									Dhruv Dharmendra – 9900919334<br />
+									Evin – 8277107027
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-fashionshow')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-6 bee-html-block"><!-- Event Block: WARBORN BGMI -->
+						<div class="event-box" data-keywords="bgmi warborn gaming esports battle royale" onclick="openPopup('popup-warbornthebgmishowdown')">
+							<h3>WARBORN: The BGMI Showdown</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 11:00 AM</p>
+							<p><strong>Fee:</strong> ₹200</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-warbornthebgmishowdown')">Register Now</button>
+						</div>
+						<!-- Popup: WARBORN BGMI -->
+						<div class="popup-overlay" id="popup-warbornthebgmishowdown">
+							<div class="popup">
+								<h4>WARBORN: The BGMI Showdown – Event Details</h4>
+								<p><strong>Theme:</strong> Dive into the chaos where strategy meets skill! Team up, aim true, and dominate the battleground to claim victory.</p>
+								<p><strong>Rules:</strong><br />
+									• No emulators or modifying tools<br />
+									• No unfair means (Aimbot, trigger bot, etc.)<br />
+									• No substitutions mid-game<br />
+									• Only in-game voice chat allowed during matches<br />
+									• Team size: 4 participants<br />
+									• Format: 7 matches (4+3), 1 round total<br />
+									• Tie-breakers and match details shared before event<br />
+									• 10 mins between each game<br />
+									• College provides internet and seating only<br />
+									• Players must bring their own equipment
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹1500<br />
+									2nd: ₹1000
+								</p>
+								<p><strong>Venue:</strong> CSE Edusat Hall</p>
+								<p><strong>Teams:</strong> 7 per cluster</p>
+								<p><strong>Contacts:</strong><br />
+									Pruthvi – 9731247977<br />
+									Pratham – 8792480999
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-warbornthebgmishowdown')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-7 bee-html-block"><!-- Event Block: Valorant -->
+						<div class="event-box" data-keywords="valorant fps gaming esports one shot nirvana" onclick="openPopup('popup-oneshottonirvanavalorant')">
+							<h3>ONE SHOT TO NIRVANA – VALORANT</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 11:00 AM</p>
+							<p><strong>Fee:</strong> ₹250</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-oneshottonirvanavalorant')">Register Now</button>
+						</div>
+						<!-- Popup: Valorant -->
+						<div class="popup-overlay" id="popup-oneshottonirvanavalorant">
+							<div class="popup">
+								<h4>ONE SHOT TO NIRVANA – VALORANT</h4>
+								<p><strong>Theme:</strong> Step into the arena where every shot matters and every move defines your legend. Coordinate, aim, and outplay your opponents in this pulse-pounding test of precision and teamwork.</p>
+								<p><strong>Rules:</strong><br />
+									• One team per participant<br />
+									• No ESP, bots, auto aimbots, or foul language<br />
+									• Prelims: BO1 single elimination with random seeding<br />
+									• Finals: BO3 single elimination<br />
+									• Match mode: Unrated<br />
+									• Agent bans and map picks allowed<br />
+									• Team size: 5 players<br />
+									• Match time: 1 hour<br />
+									• Rounds: Prelims, QF, SF, Finals<br />
+									• Bring your own gear (laptops, earphones, etc.)<br />
+									• College provides internet
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹1500<br />
+									2nd: ₹1000
+								</p>
+								<p><strong>Venue:</strong> CSE Labs (208)</p>
+								<p><strong>Teams:</strong> 2 per cluster</p>
+								<p><strong>Contacts:</strong><br />
+									Varun – 9353148133<br />
+									Pratham – 8792480999
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-oneshottonirvanavalorant')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-8 bee-html-block"><!-- Event Block: Mock IPL Auction -->
+						<div class="event-box" data-keywords="mock auction cricket ipl bidding team strategy" onclick="openPopup('popup-mockiplauction')">
+							<h3>Mock IPL Auction</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 12:30 PM</p>
+							<p><strong>Fee:</strong> ₹500</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-mockiplauction')">Register Now</button>
+						</div>
+						<!-- Popup: Mock IPL Auction -->
+						<div class="popup-overlay" id="popup-mockiplauction">
+							<div class="popup">
+								<h4>Mock IPL Auction – Event Details</h4>
+								<p><strong>Theme:</strong> Step into the shoes of a franchise owner and bid your way to victory! Build your dream cricket squad, strategize your picks, and watch your team come alive on the auction floor.</p>
+								<p><strong>Rules:</strong><br />
+									• Regular auction procedure: Auctioneer announces player name and base price<br />
+									• Teams bid using paddles; highest bid wins the player<br />
+									• Squad must include 11 players<br />
+									• Team sheets and paddles will be provided<br />
+									• Team size: 8 participants<br />
+									• Only one team per cluster (first come, first serve)
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹1500<br />
+									2nd: ₹1000
+								</p>
+								<p><strong>Venue:</strong> MBA 3rd Floor</p>
+								<p><strong>Contacts:</strong><br />
+									Nihal – 8660919088<br />
+									Yashvardhan – 9620793629
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-mockiplauction')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-9 bee-html-block"><!-- Event Block: Murder Mystery -->
+						<div class="event-box" data-keywords="murder mystery detective clues suspense team" onclick="openPopup('popup-murdermystery')">
+							<h3>Murder Mystery</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 12:30 PM</p>
+							<p><strong>Fee:</strong> ₹200</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-murdermystery')">Register Now</button>
+						</div>
+						<!-- Popup: Murder Mystery -->
+						<div class="popup-overlay" id="popup-murdermystery">
+							<div class="popup">
+								<h4>Murder Mystery – Event Details</h4>
+								<p><strong>Theme:</strong> Put on your detective hat and dive into a world of suspense. Follow the clues, outsmart your rivals, and unravel the dark secrets before time runs out. Every detail counts. Will you catch the killer in time?</p>
+								<p><strong>Rules:</strong><br />
+									• Teams must adhere to time limits—penalties for exceeding<br />
+									• Tampering with clues or malpractice leads to disqualification<br />
+									• Rules for each round will be briefed beforehand<br />
+									• Judges' decisions are final<br />
+									• Team size: 3 members
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹1500<br />
+									2nd: ₹1000
+								</p>
+								<p><strong>Venue:</strong> Mech Block Quadrangle</p>
+								<p><strong>Contacts:</strong><br />
+									Kushi – 9606851816<br />
+									Raashi – 9019892117
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-murdermystery')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-10 bee-html-block"><!-- Event Block: Short Film -->
+						<div class="event-box" data-keywords="short film cluster story video creativity" onclick="openPopup('popup-shortfilm')">
+							<h3>Short Film</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 11:00 AM</p>
+							<p><strong>Fee:</strong> ₹500</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-shortfilm')">Register Now</button>
+						</div>
+						<!-- Popup: Short Film -->
+						<div class="popup-overlay" id="popup-shortfilm">
+							<div class="popup">
+								<h4>Short Film – Event Details</h4>
+								<p><strong>Theme:</strong> Bring your cluster’s story to life on screen! Capture its spirit, people, and unique flair in a creative short film that resonates with heart and imagination. Lights, camera, action—your masterpiece awaits!</p>
+								<p><strong>Rules:</strong><br />
+									• Your film must fully represent your cluster—identity, spirit, people, achievements, or traditions<br />
+									• Keep it positive and respectful—no vulgarity or defamation<br />
+									• Max duration: 10 minutes<br />
+									• Submit your entry before Nov 6
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹5000<br />
+									2nd: ₹3000
+								</p>
+								<p><strong>Venue:</strong> Main Stage</p>
+								<p><strong>Contacts:</strong><br />
+									Varun – 93531 49133<br />
+									Manushree – 7975294599
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-shortfilm')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-11 bee-html-block"><!-- Event Block: Western Vocal Solo -->
+						<div class="event-box" data-keywords="western vocal solo english karaoke singing music" onclick="openPopup('popup-westernvocalsolo')">
+							<h3>Western Vocal Solo</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 10:00 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-westernvocalsolo')">Register Now</button>
+						</div>
+						<!-- Popup: Western Vocal Solo -->
+						<div class="popup-overlay" id="popup-westernvocalsolo">
+							<div class="popup">
+								<h4>Western Vocal Solo – Event Details</h4>
+								<p><strong>Theme:</strong> Step up and sing your favorite English track. Hit the right notes, bring emotion, and make the stage your own. Let your voice shine and connect with the audience.</p>
+								<p><strong>Rules:</strong><br />
+									• Time limit: 4 + 1 minutes<br />
+									• Karaoke or 1 accompanist allowed<br />
+									• Participants must bring karaoke music in a pen drive and submit it before the event starts
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> MBA 3rd Floor Hall</p>
+								<p><strong>Contacts:</strong><br />
+									Samarth M G – 97408 72414<br />
+									Vismai – 7975680033
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-westernvocalsolo')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-12 bee-html-block"><!-- Event Block: Classical Vocal Solo -->
+						<div class="event-box" data-keywords="classical vocal solo carnatic hindustani raga music" onclick="openPopup('popup-classicalvocalsolo')">
+							<h3>Classical Vocal Solo</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 11:00 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-classicalvocalsolo')">Register Now</button>
+						</div>
+						<!-- Popup: Classical Vocal Solo -->
+						<div class="popup-overlay" id="popup-classicalvocalsolo">
+							<div class="popup">
+								<h4>Classical Vocal Solo – Event Details</h4>
+								<p><strong>Theme:</strong> Experience the magic of tradition with your favorite raga. Sing with clarity, control, and feeling, and let every note captivate the audience.</p>
+								<p><strong>Rules:</strong><br />
+									• Time limit: 5 + 1 minutes<br />
+									• Styles: Carnatic or Hindustani<br />
+									• Maximum of 1 accompanist allowed<br />
+									• Karaoke music must be submitted via pen drive before the event starts
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> MBA 2nd Floor</p>
+								<p><strong>Contacts:</strong><br />
+									Amrutha – 9482008240<br />
+									Vismai – 7975680033
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-classicalvocalsolo')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-13 bee-html-block"><!-- Event Block: Indian Cinema Solo -->
+						<div class="event-box" data-keywords="indian cinema solo singing karaoke bollywood tollywood" onclick="openPopup('popup-indiancinemasolo')">
+							<h3>Indian Cinema Solo</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 10:00 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-indiancinemasolo')">Register Now</button>
+						</div>
+						<!-- Popup: Indian Cinema Solo -->
+						<div class="popup-overlay" id="popup-indiancinemasolo">
+							<div class="popup">
+								<h4>Indian Cinema Solo – Event Details</h4>
+								<p><strong>Theme:</strong> Bring cinematic energy to the stage. Pick a hit song, sing with confidence and style, and make the audience feel every beat.</p>
+								<p><strong>Rules:</strong><br />
+									• Time limit: 4 + 1 minutes<br />
+									• Karaoke or 1 accompanist allowed<br />
+									• Participants must bring karaoke music in a pen drive and submit it before the event starts<br />
+									• Languages: Any Indian language
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> MBA Seminar 2nd Floor</p>
+								<p><strong>Contacts:</strong><br />
+									Prahalada Simha – 79753 11998<br />
+									Medha R – 9036532266
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-indiancinemasolo')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-14 bee-html-block"><!-- Event Block: Instrumental Solo -->
+						<div class="event-box" data-keywords="instrumental solo music performance melody accompanist" onclick="openPopup('popup-instrumentalsolo')">
+							<h3>Instrumental Solo</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 11:00 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-instrumentalsolo')">Register Now</button>
+						</div>
+						<!-- Popup: Instrumental Solo -->
+						<div class="popup-overlay" id="popup-instrumentalsolo">
+							<div class="popup">
+								<h4>Instrumental Solo – Event Details</h4>
+								<p><strong>Theme:</strong> Let your instrument tell your story. Play smooth, flowing music, show your skill, and let the melody speak for itself.</p>
+								<p><strong>Rules:</strong><br />
+									• Time limit: 4 + 1 minutes<br />
+									• Karaoke or 1 accompanist allowed<br />
+									• Participants must bring karaoke music in a pen drive and submit it before the event<br />
+									• Participants must carry their own instruments<br />
+									• No background track allowed
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> MBA 3rd Floor</p>
+								<p><strong>Contacts:</strong><br />
+									Thushaar – 9481267372<br />
+									Manya – 8296702691
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-instrumentalsolo')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-15 bee-html-block"></div>
+					<div class="bee-block bee-block-16 bee-html-block"><!-- Event Block: Indian Solo Dance -->
+						<div class="event-box" data-keywords="indian solo dance classical semiclassical rhythm expression" onclick="openPopup('popup-indiansolodance')">
+							<h3>Indian Solo Dance</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 11:00 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-indiansolodance')">Register Now</button>
+						</div>
+						<!-- Popup: Indian Solo Dance -->
+						<div class="popup-overlay" id="popup-indiansolodance">
+							<div class="popup">
+								<h4>Indian Solo Dance – Event Details</h4>
+								<p><strong>Theme:</strong> Express yourself through rhythm and grace. Combine movement with expression, whether fast or slow, and end with a powerful pose.</p>
+								<p><strong>Rules:</strong><br />
+									• Time limit including stage setup: 3 + 1 minutes<br />
+									• Dance styles: Classical and Semi-Classical<br />
+									• Music must be submitted one day prior<br />
+									• No powder, fire, water, or smoke allowed<br />
+									• No vulgarity in songs or attire<br />
+									• Judges' decision is final
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Mini Auditorium</p>
+								<p><strong>Contacts:</strong><br />
+									Sreelakshmi P M – 8951234552<br />
+									Suprithi – 7760377484
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-indiansolodance')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-17 bee-html-block"><!-- Event Block: Western Solo Dance -->
+						<div class="event-box" data-keywords="western solo dance freestyle hiphop jazz performance" onclick="openPopup('popup-westernsolodance')">
+							<h3>Western Solo Dance</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 2:30 PM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-westernsolodance')">Register Now</button>
+						</div>
+						<!-- Popup: Western Solo Dance -->
+						<div class="popup-overlay" id="popup-westernsolodance">
+							<div class="popup">
+								<h4>Western Solo Dance – Event Details</h4>
+								<p><strong>Theme:</strong> Own the floor with sharp, confident moves. Keep your energy high, stay in sync with the beat, and make your performance unforgettable.</p>
+								<p><strong>Rules:</strong><br />
+									• Time limit including stage setup: 3 + 1 minutes<br />
+									• Music and dance style must be strictly Western<br />
+									• Music must be submitted one day prior<br />
+									• No powder, fire, water, or smoke allowed<br />
+									• No vulgarity in songs or attire<br />
+									• Judges' decision is final
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> MBA 3rd Floor</p>
+								<p><strong>Contacts:</strong><br />
+									Shreyas – 7259735397<br />
+									Suprithi – 7760377484
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-westernsolodance')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-18 bee-html-block"><!-- Event Block: Mono-Act -->
+						<div class="event-box" data-keywords="mono act solo drama performance emotion script" onclick="openPopup('popup-monoact')">
+							<h3>Mono-Act</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 11:30 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-monoact')">Register Now</button>
+						</div>
+						<!-- Popup: Mono-Act -->
+						<div class="popup-overlay" id="popup-monoact">
+							<div class="popup">
+								<h4>Mono-Act – Event Details</h4>
+								<p><strong>Theme:</strong> One performer, endless possibilities. Switch between emotions and characters, and leave the audience with a memorable ending.</p>
+								<p><strong>Rules:</strong><br />
+									• Judged on script quality, originality, performance, and execution<br />
+									• Vulgar or offensive content is strictly prohibited<br />
+									• Negative marks for rule violations<br />
+									• Languages: Kannada, English, Hindi<br />
+									• Soundtracks and scripts must be submitted to coordinators<br />
+									• Time limit: 5 minutes (4+1)
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> ECE Hi-Tech Lab</p>
+								<p><strong>Contacts:</strong><br />
+									Siddharth – 9019978285<br />
+									Sinchana Suresh – 9972297867
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-monoact')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-19 bee-html-block"><!-- Event Block: Beg Borrow or Steal -->
+						<div class="event-box" data-keywords="beg borrow steal campus hunt challenge team" onclick="openPopup('popup-begborroworsteal')">
+							<h3>Beg Borrow or Steal</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 11:30 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-begborroworsteal')">Register Now</button>
+						</div>
+						<!-- Popup: Beg Borrow or Steal -->
+						<div class="popup-overlay" id="popup-begborroworsteal">
+							<div class="popup">
+								<h4>Beg Borrow or Steal – Event Details</h4>
+								<p><strong>Theme:</strong> Fast-paced and full of surprises. Think quickly, persuade creatively, and grab what you need before the clock runs out.</p>
+								<p><strong>Rules:</strong><br />
+									• Teams will be given a list of items to acquire by begging, borrowing, or stealing<br />
+									• Time limit: 40 minutes<br />
+									• Items must be returned to rightful owners<br />
+									• Organizers are not responsible for missing items<br />
+									• Must operate within campus only<br />
+									• Use of vehicles is prohibited<br />
+									• Further rules will be explained at the venue<br />
+									• Team size: 2 members
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Gallery</p>
+								<p><strong>Contacts:</strong><br />
+									Poorvika – 8296069265<br />
+									Kushi – 9606851816
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-begborroworsteal')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-20 bee-html-block"><!-- Event Block: Otaku Odyssey -->
+						<div class="event-box" data-keywords="anime quiz otaku fandom japan manga trivia" onclick="openPopup('popup-otakuodysseyanimequiz')">
+							<h3>Otaku Odyssey – Anime Quiz</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 11:00 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-otakuodysseyanimequiz')">Register Now</button>
+						</div>
+						<!-- Popup: Otaku Odyssey -->
+						<div class="popup-overlay" id="popup-otakuodysseyanimequiz">
+							<div class="popup">
+								<h4>Otaku Odyssey – Event Details</h4>
+								<p><strong>Theme:</strong> For the true anime fans. Answer quickly, trust your knowledge, and prove how deep your fandom goes.</p>
+								<p><strong>Rules:</strong><br />
+									• Rules for each round will be briefed before the start<br />
+									• No mobile phones or external help allowed<br />
+									• Stationery will be provided (pen and paper)<br />
+									• Number of rounds: 3<br />
+									• Team size: 2 members
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Mech Classroom</p>
+								<p><strong>Contacts:</strong><br />
+									Siddarth – 6301918383<br />
+									Shreeya – 8792387952
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-otakuodysseyanimequiz')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-21 bee-html-block"><!-- Event Block: Chess 960 -->
+						<div class="event-box" data-keywords="chess 960 strategy board game tournament" onclick="openPopup('popup-chess960')">
+							<h3>Chess 960</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 12:00 PM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-chess960')">Register Now</button>
+						</div>
+						<!-- Popup: Chess 960 -->
+						<div class="popup-overlay" id="popup-chess960">
+							<div class="popup">
+								<h4>Chess 960 – Event Details</h4>
+								<p><strong>Theme:</strong> Chess with a twist. Start with a random board, adapt your strategy, and outthink your opponent. Every move counts.</p>
+								<p><strong>Rules:</strong><br />
+									• Standard rules of Chess 960 apply<br />
+									• Further details will be explained at the venue<br />
+									• Participants must create a chess.com account and submit their username<br />
+									• Time control: 5 minutes per match<br />
+									• Individual event (1 participant)<br />
+									• Participants must bring their own device with internet access
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Admin Block Seminar Hall</p>
+								<p><strong>Contacts:</strong><br />
+									Siddarth – 6301918383<br />
+									Aamina – 9019980163
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-chess960')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-22 bee-html-block"><!-- Event Block: Rap Battle -->
+						<div class="event-box" data-keywords="rap battle freestyle punchlines lyrics music solo" onclick="openPopup('popup-rapbattle')">
+							<h3>Rap Battle</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 2:00 PM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-rapbattle')">Register Now</button>
+						</div>
+						<!-- Popup: Rap Battle -->
+						<div class="popup-overlay" id="popup-rapbattle">
+							<div class="popup">
+								<h4>Rap Battle – Event Details</h4>
+								<p><strong>Theme:</strong> Step into the spotlight and trade rhymes. Show off your wordplay, flow, and punchlines. Let your rhythm and delivery win the crowd.</p>
+								<p><strong>Rules:</strong><br />
+									• Two rounds: Round 1 is solo (1–2 min), Round 2 is a face-off<br />
+									• Original lyrics required; any beat allowed<br />
+									• Languages: Kannada, English, Hindi<br />
+									• Solo event<br />
+									• No vulgar or inappropriate language permitted
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> MBA 2nd Floor</p>
+								<p><strong>Contacts:</strong><br />
+									Sudhanva H A – 9741121998<br />
+									Ankitha – 7483186576
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-rapbattle')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-23 bee-html-block"><!-- Event Block: Contemporary Dance -->
+						<div class="event-box" data-keywords="contemporary dance duet performance expression timing" onclick="openPopup('popup-contemporarydance')">
+							<h3>Contemporary Dance</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 11:30 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-contemporarydance')">Register Now</button>
+						</div>
+						<!-- Popup: Contemporary Dance -->
+						<div class="popup-overlay" id="popup-contemporarydance">
+							<div class="popup">
+								<h4>Contemporary Dance – Event Details</h4>
+								<p><strong>Theme:</strong> Two dancers, one stage. Match timing, energy, and expression. Move as one and make the performance unforgettable.</p>
+								<p><strong>Rules:</strong><br />
+									• Time limit including stage setup: 4 + 1 minutes<br />
+									• Any dance form allowed<br />
+									• Music must be submitted one day prior<br />
+									• No powder, fire, water, or smoke allowed<br />
+									• Team size: 2 dancers<br />
+									• No vulgarity in songs or attire<br />
+									• Judges' decision is final
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Main Stage</p>
+								<p><strong>Contacts:</strong><br />
+									Shreya S – 9739576892<br />
+									Manushree – 7975294599
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-contemporarydance')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-24 bee-html-block"><!-- Event Block: SW3AT T(O) N!RVANA -->
+						<div class="event-box" data-keywords="fitness challenge obstacle team energy motivation" onclick="openPopup('popup-sw3attonrvanafitnesswitness')">
+							<h3>SW3AT T(O) N!RVANA – Fitness Witness</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 11:30 AM</p>
+							<p><strong>Fee:</strong> ₹200</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-sw3attonrvanafitnesswitness')">Register Now</button>
+						</div>
+						<!-- Popup: SW3AT T(O) N!RVANA -->
+						<div class="popup-overlay" id="popup-sw3attonrvanafitnesswitness">
+							<div class="popup">
+								<h4>SW3AT T(O) N!RVANA – Event Details</h4>
+								<p><strong>Theme:</strong> Accountability meets energy. Team up, track each other’s progress, and push limits together. Motivation never felt this strong.</p>
+								<p><strong>Rules:</strong><br />
+									• Teams must complete a set of obstacles and tasks<br />
+									• Fastest teams advance to next rounds<br />
+									• Dress code: Sportswear and shoes mandatory<br />
+									• Arrive 15 minutes early<br />
+									• Misconduct or arguing with judges leads to disqualification<br />
+									• First aid will be provided if needed<br />
+									• Judges' decisions are final<br />
+									• Glucose will be provided<br />
+									• Team size: 2 members
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹1500<br />
+									2nd: ₹1000
+								</p>
+								<p><strong>Venue:</strong> Basketball Court</p>
+								<p><strong>Contact:</strong><br />
+									Manushree – 7975294599
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-sw3attonrvanafitnesswitness')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-25 bee-html-block"><!-- Event Block: Minigames -->
+						<div class="event-box" data-keywords="minigames fun challenge reflex team speed" onclick="openPopup('popup-minigames')">
+							<h3>Minigames</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 1:00 PM</p>
+							<p><strong>Fee:</strong> ₹200</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-minigames')">Register Now</button>
+						</div>
+						<!-- Popup: Minigames -->
+						<div class="popup-overlay" id="popup-minigames">
+							<div class="popup">
+								<h4>Minigames – Event Details</h4>
+								<p><strong>Theme:</strong> Quick, exciting, and fun. Play short challenges that test your speed, smarts, and reflexes. Perfect for a burst of energy.</p>
+								<p><strong>Rules:</strong><br />
+									• Multiple short games will be played<br />
+									• Top-performing teams will be rewarded<br />
+									• Rules and objectives will be explained at the venue<br />
+									• Team size: 4 members
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong> Goodies</p>
+								<p><strong>Venue:</strong> Mech Quadrangle</p>
+								<p><strong>Contacts:</strong><br />
+									Poorvika – 82960 69265<br />
+									Yashvardhan C – 9620793629
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-minigames')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-26 bee-html-block"></div>
+					<div class="bee-block bee-block-27 bee-html-block"><!-- Event Block: Venture Vault -->
+						<div class="event-box" data-keywords="venture vault startup pitch shark tank business idea" onclick="openPopup('popup-venturevaultsharktankedition')">
+							<h3>Venture Vault – Shark Tank Edition</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 11:00 AM</p>
+							<p><strong>Fee:</strong> ₹300</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-venturevaultsharktankedition')">Register Now</button>
+						</div>
+						<!-- Popup: Venture Vault -->
+						<div class="popup-overlay" id="popup-venturevaultsharktankedition">
+							<div class="popup">
+								<h4>Venture Vault – Event Details</h4>
+								<p><strong>Theme:</strong> Pitch it like a pro. Present your idea with confidence, win the judges over, and see if your startup dream makes the cut.</p>
+								<p><strong>Rules:</strong><br />
+									• All pitches must be original and created by the presenting team<br />
+									• Judged on creativity, feasibility, market potential, and presentation<br />
+									• Props, posters, and PowerPoint allowed—submit via pen drive beforehand<br />
+									• Time limit: 5 minutes + 2-minute panel interview<br />
+									• Team size: 3 members<br />
+									• Two rounds: Round 1 – Business Concept Presentation; Round 2 – Rules briefed at venue
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹1500<br />
+									2nd: ₹1000
+								</p>
+								<p><strong>Venue:</strong> CSE Seminar Hall</p>
+								<p><strong>Contacts:</strong><br />
+									Anwesh – 6363662026<br />
+									Lakshitha – 9886083770
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-venturevaultsharktankedition')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-28 bee-html-block"><!-- Event Block: Debate Me! Maybe -->
+						<div class="event-box" data-keywords="debate argument discussion public speaking rebuttal" onclick="openPopup('popup-debatememaybe')">
+							<h3>Debate Me! Maybe</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 12:00 PM</p>
+							<p><strong>Fee:</strong> ₹150</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-debatememaybe')">Register Now</button>
+						</div>
+						<!-- Popup: Debate Me! Maybe -->
+						<div class="popup-overlay" id="popup-debatememaybe">
+							<div class="popup">
+								<h4>Debate Me! Maybe – Event Details</h4>
+								<p><strong>Theme:</strong> Words are your weapon. Build strong arguments, stay sharp, and deliver with confidence. Convince the crowd and claim victory.</p>
+								<p><strong>Rules:</strong><br />
+									• Topics will be given on the spot<br />
+									• 5 minutes prep time, followed by structured debate: opening, rebuttals, closing<br />
+									• Respectful conduct is mandatory—no personal attacks or derogatory language<br />
+									• Language: English<br />
+									• Judges' decisions are final<br />
+									• Event has 2 rounds<br />
+									• Team size: 3 members
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> ECE Hi-Tech Lab</p>
+								<p><strong>Contacts:</strong><br />
+									Nihal – 8660919088<br />
+									Lakshitha – 9886083770
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-debatememaybe')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-29 bee-html-block"><!-- Event Block: Where Is Waldo? -->
+						<div class="event-box" data-keywords="where is waldo campus hunt clues riddles mystery" onclick="openPopup('popup-whereiswaldo')">
+							<h3>Where Is Waldo?</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 11:00 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-whereiswaldo')">Register Now</button>
+						</div>
+						<!-- Popup: Where Is Waldo? -->
+						<div class="popup-overlay" id="popup-whereiswaldo">
+							<div class="popup">
+								<h4>Where Is Waldo? – Event Details</h4>
+								<p><strong>Theme:</strong> Turn the campus into your playground by following clues, cracking riddles, and racing through hidden corners in search of the elusive Waldo.</p>
+								<p><strong>Rules:</strong><br />
+									• “Waldo” characters will be hidden across campus<br />
+									• Teams receive photos with distinguishing features<br />
+									• Locate as many Waldos as possible within 60 minutes<br />
+									• No vehicles allowed<br />
+									• Further rules will be explained at the venue<br />
+									• Team size: 2 members
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Gallery</p>
+								<p><strong>Contacts:</strong><br />
+									Raashi – 9019892117<br />
+									Sinchana Suresh – 9972297867
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-whereiswaldo')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-30 bee-html-block"><!-- Event Block: The Laugh Lab -->
+						<div class="event-box" data-keywords="laugh lab improv mad ads comedy skit humor" onclick="openPopup('popup-thelaughlabimprovmadads')">
+							<h3>The Laugh Lab – Improv/Mad Ads</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 2:00 PM</p>
+							<p><strong>Fee:</strong> ₹200</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-thelaughlabimprovmadads')">Register Now</button>
+						</div>
+						<!-- Popup: The Laugh Lab -->
+						<div class="popup-overlay" id="popup-thelaughlabimprovmadads">
+							<div class="popup">
+								<h4>The Laugh Lab – Event Details</h4>
+								<p><strong>Theme:</strong> Step onto the stage and spark laughter. Perform quick-witted skits, deliver clever jokes, or watch hilarious moments that light up the room and leave everyone smiling.</p>
+								<p><strong>Rules:</strong><br />
+									• Round 1: Emotions and scenario given on the spot; 5 minutes prep<br />
+									• Round 2: Mad Ads faceoff<br />
+									• No targeting individuals or religions<br />
+									• No dual-meaning or obscene content<br />
+									• Negative marking for exceeding time<br />
+									• Judges' decisions are final<br />
+									• Team size: 4 members<br />
+									• Total rounds: 2
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> MBA 2nd Floor</p>
+								<p><strong>Contacts:</strong><br />
+									Manushree – 7975294599<br />
+									Sai Gowrav – 93802 61949
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-thelaughlabimprovmadads')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-31 bee-html-block"><!-- Event Block: Ethereal Ink – Face Painting -->
+						<div class="event-box" data-keywords="face painting art contrast light dark angel demon yin yang" onclick="openPopup('popup-etherealinkfacepainting')">
+							<h3>Ethereal Ink – Face Painting</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 11:30 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-etherealinkfacepainting')">Register Now</button>
+						</div>
+						<!-- Popup: Ethereal Ink – Face Painting -->
+						<div class="popup-overlay" id="popup-etherealinkfacepainting">
+							<div class="popup">
+								<h4>Ethereal Ink – Event Details</h4>
+								<p><strong>Theme:</strong> Transform ordinary faces into works of art. Experiment with colors, patterns, and designs that let your creativity shine.</p>
+								<p><strong>Rules:</strong><br />
+									• Team of 2: One painter and one model<br />
+									• Theme: Contrast between light and dark (e.g., good vs evil, angel vs demon, yin and yang)<br />
+									• Surprise twist mid-way<br />
+									• No phones, stencils, stamps, or cosmetics allowed<br />
+									• Tissues, water, and paper glasses will be provided<br />
+									• Time limit: 60 minutes + buffer
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Gallery</p>
+								<p><strong>Contacts:</strong><br />
+									Ankitha – 7483186576<br />
+									Varun Raj – 9353149133
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-etherealinkfacepainting')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-32 bee-html-block"></div>
+					<div class="bee-block bee-block-33 bee-html-block"><!-- Event Block: Fandom Moksha -->
+						<div class="event-box" data-keywords="fandom moksha geek quiz movies tv pop culture trivia" onclick="openPopup('popup-fandommokshageekawakening')">
+							<h3>Fandom Moksha – Geek Awakening</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 2:00 PM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-fandommokshageekawakening')">Register Now</button>
+						</div>
+						<!-- Popup: Fandom Moksha -->
+						<div class="popup-overlay" id="popup-fandommokshageekawakening">
+							<div class="popup">
+								<h4>Fandom Moksha – Event Details</h4>
+								<p><strong>Theme:</strong> Test your pop culture knowledge. Answer fast, compete with fellow fans, and show who really rules the fandom world.</p>
+								<p><strong>Rules:</strong><br />
+									• Covers multiple genres of movies and TV shows<br />
+									• Written preliminary round; stationery provided<br />
+									• No external resources allowed<br />
+									• Quizmaster’s decision is final<br />
+									• Number of rounds: 4<br />
+									• Team size: 2 members
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Mini Auditorium</p>
+								<p><strong>Contacts:</strong><br />
+									Varun Raj – 9353149133<br />
+									Sai Gowrav – 93802 61949
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-fandommokshageekawakening')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-34 bee-html-block"><!-- Event Block: Photography -->
+						<div class="event-box" data-keywords="photography nirvana dslr hidden symbol visual storytelling" onclick="openPopup('popup-photography')">
+							<h3>Photography</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 11:00 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-photography')">Register Now</button>
+						</div>
+						<!-- Popup: Photography -->
+						<div class="popup-overlay" id="popup-photography">
+							<div class="popup">
+								<h4>Photography – Event Details</h4>
+								<p><strong>Theme:</strong> Capture stories one frame at a time. Focus on emotion, detail, and moments that make your photos unforgettable.</p>
+								<p><strong>Rules:</strong><br />
+									• Theme: Nirvana<br />
+									• Photos must be original and must not include identifiable human faces or expressions<br />
+									• A hidden symbol must be incorporated<br />
+									• DSLR allowed; bring your own SD card<br />
+									• Submissions must meet format and deadline requirements<br />
+									• Further rules will be explained at the venue<br />
+									• Individual event (1 participant)
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Gallery</p>
+								<p><strong>Contacts:</strong><br />
+									Pruthvi – 97312 47977<br />
+									Saanvi – 8971054780
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-photography')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-35 bee-html-block"></div>
+					<div class="bee-block bee-block-36 bee-html-block"><!-- Event Block: Reel Making -->
+						<div class="event-box" data-keywords="reel making video editing storytelling parichay nirvana" onclick="openPopup('popup-reelmaking')">
+							<h3>Reel Making</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 11:00 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-reelmaking')">Register Now</button>
+						</div>
+						<!-- Popup: Reel Making -->
+						<div class="popup-overlay" id="popup-reelmaking">
+							<div class="popup">
+								<h4>Reel Making – Event Details</h4>
+								<p><strong>Theme:</strong> Turn your ideas into short, creative videos. Blend storytelling, style, and editing to make reels that entertain and inspire.</p>
+								<p><strong>Rules:</strong><br />
+									• Reels must align with the theme: *Parichay* and its journey to Nirvana<br />
+									• Candid pictures allowed for authenticity<br />
+									• Phones and DSLRs permitted<br />
+									• All work must be original<br />
+									• Mystery prop will be assigned for creative incorporation<br />
+									• Submission time: 3 hours (including editing)<br />
+									• Max duration: 45 seconds
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Gallery</p>
+								<p><strong>Contacts:</strong><br />
+									Pruthvi – 9731247977<br />
+									Shreeya – 8792387952
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-reelmaking')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-37 bee-html-block"><!-- Event Block: Clay Modelling -->
+						<div class="event-box" data-keywords="clay modelling sculpture creativity art mech quadrangle" onclick="openPopup('popup-claymodelling')">
+							<h3>Clay Modelling</h3>
+							<p><strong>Date:</strong> Nov 8, 2025</p>
+							<p><strong>Time:</strong> 10:30 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-claymodelling')">Register Now</button>
+						</div>
+						<!-- Popup: Clay Modelling -->
+						<div class="popup-overlay" id="popup-claymodelling">
+							<div class="popup">
+								<h4>Clay Modelling – Event Details</h4>
+								<p><strong>Theme:</strong> Shape your imagination into real creations. Sculpt figures, patterns, or models that showcase skill and creativity.</p>
+								<p><strong>Rules:</strong><br />
+									• Individual event (1 participant)<br />
+									• Theme will be given on the spot<br />
+									• Clay will be provided; no external clay allowed<br />
+									• Bring your own sculpting tools (e.g., scale, pencils)<br />
+									• Clay base and model will not be returned
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Mech Quadrangle</p>
+								<p><strong>Contacts:</strong><br />
+									Sai Gowrav – 9380261949<br />
+									Ankitha – 7483186576
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-claymodelling')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-38 bee-html-block"><!-- Event Block: Elocution -->
+						<div class="event-box" data-keywords="elocution speech prose english public speaking clarity emotion" onclick="openPopup('popup-elocution')">
+							<h3>Elocution</h3>
+							<p><strong>Date:</strong> Nov 7, 2025</p>
+							<p><strong>Time:</strong> 11:00 AM</p>
+							<p><strong>Fee:</strong> ₹100</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-elocution')">Register Now</button>
+						</div>
+						<!-- Popup: Elocution -->
+						<div class="popup-overlay" id="popup-elocution">
+							<div class="popup">
+								<h4>Elocution – Event Details</h4>
+								<p><strong>Theme:</strong> Grab the spotlight and speak with impact. Deliver words with clarity, emotion, and confidence that truly connect with the audience.</p>
+								<p><strong>Rules:</strong><br />
+									• Individual event (1 participant)<br />
+									• Duration: 5 minutes<br />
+									• Topics will be given on the day of the event (prose only)<br />
+									• Medium: English<br />
+									• 3 minutes of preparation time<br />
+									• Reading off paper is allowed but discouraged (affects scoring)
+								</p>
+								<p><strong>Stars:</strong> ⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Mini Auditorium</p>
+								<p><strong>Contacts:</strong><br />
+									Medha Sanjeev – 7892006961<br />
+									Evin – 8277107027
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://payments.billdesk.com/bdcollect/bd/rnsiotec/6052', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-elocution')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-40 bee-html-block"><!-- Event Block: Banner Painting -->
+						<div class="event-box" data-keywords="banner painting fest theme art creativity teamwork visual impact" onclick="openPopup('popup-bannerpainting')">
+							<h3>Banner Painting</h3>
+							<p><strong>Submission Deadline:</strong> Nov 5, 2025</p>
+							<p><strong>Time Limit:</strong> 3 hours</p>
+							<p><strong>Fee:</strong> Free</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-bannerpainting')">Register Now</button>
+						</div>
+						<!-- Popup: Banner Painting -->
+						<div class="popup-overlay" id="popup-bannerpainting">
+							<div class="popup">
+								<h4>Banner Painting – Event Details</h4>
+								<p><strong>Theme:</strong> Unleash your creativity on a grand canvas! With brushes and colors in hand, bring the fest theme to life in bold strokes and vibrant designs.</p>
+								<p><strong>Rules:</strong><br />
+									• Team event (7–10 members)<br />
+									• One banner per cluster<br />
+									• Theme: Fest theme<br />
+									• Banner size provided by organizers<br />
+									• Teams must bring their own colors and brushes<br />
+									• Late submissions will lead to disqualification<br />
+									• Judging criteria: creativity, clarity of message, teamwork, visual impact
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Gallery</p>
+								<p><strong>Contacts:</strong><br />
+									Akshit – 9108713239<br />
+									Niharika – 9739363926
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://forms.gle/D6oecEmh8p6kmwix9', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-bannerpainting')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-41 bee-html-block"><!-- Event Block: Origami -->
+						<div class="event-box" data-keywords="origami paper folding nirvana creativity precision art" onclick="openPopup('popup-origami')">
+							<h3>Origami</h3>
+							<p><strong>Submission Deadline:</strong> Nov 5, 2025</p>
+							<p><strong>Team Size:</strong> 6–8 members</p>
+							<p><strong>Fee:</strong> Free</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-origami')">Register Now</button>
+						</div>
+						<!-- Popup: Origami -->
+						<div class="popup-overlay" id="popup-origami">
+							<div class="popup">
+								<h4>Origami – Event Details</h4>
+								<p><strong>Theme:</strong> Fold your way to serenity! Bring the ancient art of paper folding to life to interpret the theme of Nirvana.</p>
+								<p><strong>Rules:</strong><br />
+									• Team size: 6–8 members<br />
+									• Only paper folding allowed—no cutting, pasting, or external decorations<br />
+									• Use plain, non-printed origami sheets (any color)<br />
+									• Participants must bring their own paper<br />
+									• One or multiple pieces may be created<br />
+									• Location for submission will be announced later<br />
+									• Judging criteria: neatness, fold accuracy, creativity, difficulty level<br />
+									• Submission deadline: Nov 5, 2025
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> To be announced</p>
+								<p><strong>Contacts:</strong><br />
+									Akshit – 9108713239<br />
+									Niharika – 9739363926
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://forms.gle/D6oecEmh8p6kmwix9', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-origami')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-42 bee-html-block"><!-- Event Block: Model Installation -->
+						<div class="event-box" data-keywords="model installation eco-friendly nirvana inner peace tranquility chaos" onclick="openPopup('popup-modelinstallation')">
+							<h3>Model Installation</h3>
+							<p><strong>Submission Deadline:</strong> Nov 5, 2025</p>
+							<p><strong>Team Size:</strong> 7–10 members</p>
+							<p><strong>Fee:</strong> Free</p>
+							<button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-modelinstallation')">Register Now</button>
+						</div>
+						<!-- Popup: Model Installation -->
+						<div class="popup-overlay" id="popup-modelinstallation">
+							<div class="popup">
+								<h4>Model Installation – Event Details</h4>
+								<p><strong>Theme:</strong> Construct a stable, large-scale model using eco-friendly materials to illustrate Nirvana: Inner Peace, Tranquility, or Peace with Chaos.</p>
+								<p><strong>Rules:</strong><br />
+									• Team size: 7–10 members<br />
+									• Two installations per cluster<br />
+									• Use eco-friendly/recyclable materials (plastics discouraged)<br />
+									• Submission deadline: Nov 5, 2025<br />
+									• Judging criteria: creativity, theme relevance, structural stability, presentation
+								</p>
+								<p><strong>Stars:</strong> ⭐⭐⭐⭐⭐</p>
+								<p><strong>Prize:</strong><br />
+									1st: ₹750<br />
+									2nd: ₹500
+								</p>
+								<p><strong>Venue:</strong> Gallery</p>
+								<p><strong>Contacts:</strong><br />
+									Akshit – 9108713239<br />
+									Niharika – 9739363926
+								</p>
+								<div class="popup-buttons">
+									<button class="continue-btn" onclick="window.open('https://forms.gle/D6oecEmh8p6kmwix9', '_blank')">Yes, Continue</button>
+									<button class="close-btn" onclick="closePopup('popup-modelinstallation')">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Event Block: Warli Art -->
+<div class="event-box" data-keywords="warli art tribal drawing festivals geometric patterns" onclick="openPopup('popup-warliart')" data-animated="true">
+  <h3>Warli Art</h3>
+  <p><strong>Date:</strong> Nov 5, 2025</p>
+  <p><strong>Time:</strong> Submission Deadline</p>
+  <p><strong>Fee:</strong> Free</p>
+  <button class="register-btn" onclick="event.stopPropagation(); openPopup('popup-warliart')">Register Now</button>
+</div>
+
+<!-- Popup: Warli Art -->
+<div class="popup-overlay" id="popup-warliart">
+  <div class="popup">
+    <h4>Warli Art – Event Details</h4>
+    <p><strong>Theme:</strong> Bring festivals to life with the traditional Warli art style! Using stick figures, tribal motifs, and geometric patterns, showcase your creativity within 1.5 hours. Every stroke counts—neatness, theme, and presentation will define your masterpiece.</p>
+    <p><strong>Rules:</strong><br>
+      • Individual event<br>
+      • Theme: Festivals<br>
+      • Only traditional Warli art style is allowed (stick figures, geometric patterns, tribal motifs)<br>
+      • Participants must bring their own art materials (paper, pens, brushes, colors)<br>
+      • Date of submission: 5 November<br>
+      • Entries submitted after the deadline won’t be considered<br>
+      • Judgment will be based on creativity, adherence to theme, neatness, and overall presentation
+    </p>
+    <p><strong>Stars:</strong> ⭐⭐⭐⭐⭐</p>
+    <p><strong>Prize:</strong><br>
+      Artistic recognition and feature in Parichay Fest gallery
+    </p>
+    <p><strong>Venue:</strong> Art Zone</p>
+    <p><strong>Contacts:</strong><br>
+      Akshit – 9108713239<br>
+      Niharika – 9739363926
+    </p>
+    <div class="popup-buttons">
+      <button class="continue-btn" onclick="window.location.href='https://youarelate.pages.dev/'">Yes, Continue</button>
+      <button class="close-btn" onclick="closePopup('popup-warliart')">Close</button>
+    </div>
+  </div>
+</div>
+					<div class="bee-block bee-block-43 bee-html-block"><!-- Footer with Gradient Glass Effect -->
+						<footer style="width: 100%; padding: 20px; text-align: center; color: #fff; font-size: 14px; backdrop-filter: blur(12px); background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(0,0,0,0.2)); border-top: 1px solid rgba(255,255,255,0.2); box-shadow: 0 0 20px rgba(0,0,0,0.3); margin-top: 60px;">
+  <img src="https://res.cloudinary.com/duslhfphv/image/upload/v1760207372/cat_logoes_2025___NN_20250918_111315_0000_zfuv2x.png" 
+       alt="CAT logo" 
+       style="width: 80px; height: auto; margin-bottom: 12px; border-radius: 8px; box-shadow: 0 0 12px rgba(255,255,255,0.2);">
+  <p style="margin: 0;">Made with ❤️ by Cat @ RNSIT</p>
+  <p style="font-size: 12px; color: #ccc; margin-top: 4px;">© 2025 Nirvana Fest. All rights reserved.</p>
+</footer>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script>
+// Lightweight interactivity: parallax, intersection observer animations, popup enhancements
+
+(function() {
+  // Parallax: move background slightly slower than scroll
+  const bg = document.querySelector('.bee-background-video-container');
+  if (bg) {
+    window.addEventListener('scroll', () => {
+      // throttle using requestAnimationFrame
+      if (bg._ticking) return;
+      bg._ticking = true;
+      requestAnimationFrame(() => {
+        const scrolled = window.scrollY || window.pageYOffset;
+        // move up to 18% of scroll for subtle effect
+        const y = scrolled * -0.18;
+        bg.style.transform = `translate3d(0, ${y}px, 0)`;
+        bg._ticking = false;
       });
-  </script>
+    }, { passive: true });
+  }
+
+  // Scroll-in animations for event boxes (IntersectionObserver)
+  const boxes = document.querySelectorAll('.event-box');
+  const ioOptions = { root: null, rootMargin: '0px', threshold: 0.12 };
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        el.setAttribute('data-animated', 'true');
+        // slight stagger using dataset index
+        io.unobserve(el);
+      }
+    });
+  }, ioOptions);
+  boxes.forEach((b, i) => { b.setAttribute('data-animated', 'false'); io.observe(b); });
+
+  // Enhance popup open/close to add class-driven animations and close on overlay click / Esc key
+  window.openPopup = function(id) {
+    const popupOverlay = document.getElementById(id);
+    if (!popupOverlay) return;
+    popupOverlay.style.display = 'flex';
+    // ensure popup's .popup gets class open after next frame for transition
+    const popup = popupOverlay.querySelector('.popup');
+    if (popup) {
+      requestAnimationFrame(() => popup.classList.add('open'));
+    }
+    // lock body scrolling while popup open
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    // close on overlay click (but not when clicking popup)
+    popupOverlay.addEventListener('click', function onOuterClick(e) {
+      if (e.target === popupOverlay) { closePopup(id); popupOverlay.removeEventListener('click', onOuterClick); }
+    });
+  };
+
+  window.closePopup = function(id) {
+    const popupOverlay = document.getElementById(id);
+    if (!popupOverlay) return;
+    const popup = popupOverlay.querySelector('.popup');
+    if (popup) popup.classList.remove('open');
+    // give time for animation then hide
+    setTimeout(() => {
+      popupOverlay.style.display = 'none';
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    }, 260);
+  };
+
+  // Close on ESC key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      // find any visible popup-overlay and close it
+      document.querySelectorAll('.popup-overlay').forEach(ov => {
+        if (ov.style.display === 'flex') {
+          const id = ov.id; if (id) closePopup(id);
+        }
+      });
+    }
+  });
+
+  // Button press micro-interaction: add class for active then remove after animation
+  document.addEventListener('pointerdown', function(e) {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    btn.classList.add('pressed');
+  });
+  document.addEventListener('pointerup', function(e) {
+    document.querySelectorAll('button.pressed').forEach(b => b.classList.remove('pressed'));
+  });
+
+  // Add subtle parallax class changes on scroll for brightness tweaks
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const sc = window.scrollY || window.pageYOffset;
+    document.querySelectorAll('.parallax-shift').forEach(el => {
+      const depth = el.dataset.depth ? parseFloat(el.dataset.depth) : 0.02;
+      const shift = Math.min(1, Math.abs(sc - lastScroll) / 800) * depth;
+      el.style.filter = `brightness(${1 - shift})`;
+    });
+    lastScroll = sc;
+  }, { passive: true });
+
+})();
+</script>
+
+
+<!-- NIRVANA: Background videos (injected) -->
+<div id="nirvana-bg" aria-hidden="true">
+  <video class="vid-back" src="https://54085c3b83.imgdist.com/pub/bfra/miczdxvn/ure/nnv/74w/Animated_Webpage_Waves_Background.mp4" autoplay muted loop playsinline preload="auto" crossorigin="anonymous"></video>
+  <video class="vid-mid" src="https://res.cloudinary.com/duslhfphv/video/upload/v1760553624/lv_0_20251016000428_ozeanv.mp4" autoplay muted loop playsinline preload="auto" crossorigin="anonymous"></video>
+  <video class="vid-front" src="https://res.cloudinary.com/duslhfphv/video/upload/v1760549076/backgeound_video_noowqo.mp4" autoplay muted loop playsinline preload="auto" crossorigin="anonymous"></video>
+</div>
+<div id="nirvana-overlay" aria-hidden="true"></div>
+
+<!-- NIRVANA: Loader -->
+<div id="nirvana-loader" role="status" aria-live="polite">
+  <div id="nirvana-graphic" aria-hidden="true">
+    <!-- decorative cube made with CSS will be animated via JS -->
+  </div>
+  <div id="nirvana-title">Loading NIRVANA</div>
+  <div id="nirvana-sub">Setting the vibe…</div>
+  <div id="nirvana-bar"><div id="nirvana-fill"></div></div>
+</div>
+
+<script>
+(function(){
+  const vids = Array.from(document.querySelectorAll('#nirvana-bg video'));
+  const loader = document.getElementById('nirvana-loader');
+  const fill = document.getElementById('nirvana-fill');
+
+  // progressive fake loading until resources ready
+  let progress = 0;
+  const tick = setInterval(()=> {
+    progress = Math.min(92, progress + Math.random()*6 + 2);
+    fill.style.width = Math.round(progress) + '%';
+  }, 160);
+
+  function finalize(){
+    clearInterval(tick);
+    fill.style.width = '100%';
+    // fade loader out
+    setTimeout(()=> {
+      loader.style.transition = 'opacity 700ms ease';
+      loader.style.opacity = 0;
+      loader.addEventListener('transitionend', ()=> loader.remove(), {once:true});
+    }, 420);
+  }
+
+  // finalize when window loads and at least one video canplay
+  window.addEventListener('load', ()=>{
+    const can = vids.some(v=> v && v.readyState >= 3);
+    if(can){ finalize(); } else {
+      // wait for first playable
+      let handled=false;
+      vids.forEach(v=>{
+        v.addEventListener('canplay', ()=>{ if(!handled){ handled=true; finalize(); } }, {once:true});
+      });
+      // fallback after 6s
+      setTimeout(()=>{ if(!document.body.contains(loader)) return; finalize(); }, 6000);
+    }
+  });
+
+  // quick click to skip
+  loader.addEventListener('click', finalize);
+
+  // background blend on scroll
+  function updateBlend(){
+    const docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    const vh = window.innerHeight;
+    const norm = docHeight <= vh ? 0 : Math.min(1, window.scrollY / (docHeight - vh));
+    // thresholds for smooth cinematic blend
+    const oBack = Math.max(0.06, 1 - Math.max(0, (norm - 0.25)/0.6));
+    const oMid = Math.max(0.06, Math.min(1, (norm - 0.05)/0.6));
+    const oFront = Math.max(0.06, Math.min(1, (norm - 0.4)/0.6));
+    const layers = {back:oBack, mid:oMid, front:oFront};
+    vids.forEach(v=>{
+      if(v.classList.contains('vid-back')) v.style.opacity = layers.back;
+      if(v.classList.contains('vid-mid')) v.style.opacity = layers.mid;
+      if(v.classList.contains('vid-front')) v.style.opacity = layers.front;
+      // subtle parallax translate
+      const idx = v.classList.contains('vid-back')?0:(v.classList.contains('vid-mid')?1:2);
+      const translate = Math.round(norm*30/(idx+1));
+      v.style.transform = `translate(-50%,-50%) translateY(${translate}px)`;
+    });
+  }
+  window.addEventListener('scroll', updateBlend, {passive:true});
+  window.addEventListener('resize', updateBlend);
+  setTimeout(updateBlend, 400);
+
+  // small animated cube inside #nirvana-graphic using CSS boxes
+  const g = document.getElementById('nirvana-graphic');
+  if(g){
+    g.style.position='relative';
+    const cube = document.createElement('div');
+    cube.style.width='100%'; cube.style.height='100%'; cube.style.transformStyle='preserve-3d'; cube.style.position='absolute';
+    cube.style.left='0'; cube.style.top='0';
+    cube.className='n-cube';
+    g.appendChild(cube);
+    ['front','back','left','right','top','bottom'].forEach((f)=>{
+      const face = document.createElement('div');
+      face.className='n-face n-'+f;
+      face.style.position='absolute';
+      face.style.inset='0';
+      face.style.borderRadius='6px';
+      face.style.background='linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.05))';
+      face.style.border='1px solid rgba(255,255,255,0.04)';
+      cube.appendChild(face);
+    });
+    let a=0;
+    (function spin(){ a+=0.9; cube.style.transform = `rotateX(${a/2}deg) rotateY(${a}deg)`; requestAnimationFrame(spin); })();
+  }
+
+})();
+</script>
+<script>
+  // SEARCH BAR FUNCTIONALITY
+  document.getElementById('searchInput').addEventListener('input', filterEvents);
+
+  // FILTER DROPDOWNS
+  ['dateFilter','timeFilter','feeFilter'].forEach(id => {
+    document.getElementById(id).addEventListener('change', filterEvents);
+  });
+
+  // EVENT SELECTOR SCROLL
+  document.getElementById('eventSelector').addEventListener('change', e => {
+    const selected = e.target.value.toLowerCase();
+    const eventBox = Array.from(document.querySelectorAll('.event-box')).find(box =>
+      (box.getAttribute('data-keywords') || '').toLowerCase().includes(selected)
+    );
+    if (eventBox) {
+      eventBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      eventBox.style.boxShadow = '0 0 20px rgba(255,255,255,0.4)';
+      eventBox.style.transition = 'box-shadow 0.6s ease';
+      setTimeout(() => eventBox.style.boxShadow = '', 1500);
+    }
+  });
+
+  // RESET BUTTON
+  function resetFilters() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('dateFilter').value = '';
+    document.getElementById('timeFilter').value = '';
+    document.getElementById('feeFilter').value = '';
+    document.getElementById('eventSelector').value = '';
+    filterEvents();
+  }
+
+  // MAIN FILTER FUNCTION
+  function filterEvents() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const date = document.getElementById('dateFilter').value;
+    const time = document.getElementById('timeFilter').value;
+    const fee = parseInt(document.getElementById('feeFilter').value || '99999');
+
+    const events = document.querySelectorAll('.event-box');
+    let visibleCount = 0;
+
+    events.forEach(event => {
+      const keywords = (event.getAttribute('data-keywords') || '').toLowerCase();
+      const dateText = event.querySelector('p:nth-of-type(1)')?.textContent || '';
+      const timeText = event.querySelector('p:nth-of-type(2)')?.textContent || '';
+      const feeText = parseInt((event.querySelector('p:nth-of-type(3)')?.textContent.match(/\d+/) || [0])[0]);
+
+      const show =
+        keywords.includes(query) &&
+        (date === '' || dateText.includes(date)) &&
+        (time === '' || timeText.includes(time)) &&
+        (feeText <= fee);
+
+      event.style.display = show ? 'block' : 'none';
+      if (show) visibleCount++;
+    });
+
+    // Show/hide "No results" message
+    const noResults = document.getElementById('noResults');
+    if (noResults) {
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+  }
+</script>
+
+<!-- Points Table Popup -->
+<div class="popup-overlay" id="pointsPopup">
+  <div class="popup-content">
+    <h2>Claim the Top Spot 🏆</h2>
+    <p class="tagline">Every point counts. Every win matters. Be the legend your cluster remembers.</p>
+
+    <div class="star-block">
+      <h3>5.0 ★★★★★</h3>
+      <table>
+        <tr><th>Rank</th><th>Points</th></tr>
+        <tr><td><div class="rank-line"><span class="medal">🥇</span>1st Place</div></td><td>30</td></tr>
+        <tr><td><div class="rank-line"><span class="medal">🥈</span>2nd Place</div></td><td>20</td></tr>
+        <tr><td><div class="rank-line"><span class="medal">🥉</span>3rd Place</div></td><td>10</td></tr>
+      </table>
+    </div>
+
+    <div class="star-block">
+      <h3>3.0 ★★★</h3>
+      <table>
+        <tr><th>Rank</th><th>Points</th></tr>
+        <tr><td><div class="rank-line"><span class="medal">🥇</span>1st Place</div></td><td>20</td></tr>
+        <tr><td><div class="rank-line"><span class="medal">🥈</span>2nd Place</div></td><td>15</td></tr>
+        <tr><td><div class="rank-line"><span class="medal">🥉</span>3rd Place</div></td><td>10</td></tr>
+      </table>
+    </div>
+
+    <div class="star-block">
+      <h3>1.0 ★</h3>
+      <table>
+        <tr><th>Rank</th><th>Points</th></tr>
+        <tr><td><div class="rank-line"><span class="medal">🥇</span>1st Place</div></td><td>10</td></tr>
+        <tr><td><div class="rank-line"><span class="medal">🥈</span>2nd Place</div></td><td>05</td></tr>
+        <tr><td><div class="rank-line"><span class="medal">🥉</span>3rd Place</div></td><td>01</td></tr>
+      </table>
+    </div>
+
+    <button class="close-btn" onclick="closePointsPopup()">Let’s Win This!</button>
+  </div>
+</div>
+<script>
+  function openPointsPopup() {
+    document.getElementById('pointsPopup').classList.add('active');
+  }
+  function closePointsPopup() {
+    document.getElementById('pointsPopup').classList.remove('active');
+  }
+</script>
+<script>
+  // ✅ Scroll-triggered haptic feedback for supported mobile browsers
+  if ("vibrate" in navigator) {
+    let lastVibe = 0;
+    window.addEventListener("scroll", () => {
+      const now = Date.now();
+      if (now - lastVibe > 100) { // vibrate every 100ms max
+        navigator.vibrate(10); // short buzz
+        lastVibe = now;
+      }
+    });
+  }
+</script>
 </body>
+
 </html>
+
