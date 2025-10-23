@@ -818,77 +818,77 @@ body > .bee-page-container {padding-bottom:0 !important}
 						<div class="parichay-logo">
 							<img alt="Parichay Logo" src="https://res.cloudinary.com/duslhfphv/image/upload/v1760205040/logo_final.png_COPY_2_RESIZED_dywpug.png" />
 						</div>
-<!-- Minimal Countdown Timer (Clean + Emoji Only) -->
-<div id="countdownBox" onclick="triggerVibration()">
-  <div class="countdownRow">
-    <div class="segment"><span id="days">00</span><div>🗓️</div></div>
-    <div class="segment"><span id="hours">00</span><div>⏰</div></div>
-    <div class="segment"><span id="minutes">00</span><div>🕒</div></div>
-    <div class="segment"><span id="seconds">00</span><div>⌛</div></div>
+<!-- Digital Countdown Clock (DS-Digital Style) -->
+<div id="digitalCountdown" onclick="triggerVibration()">
+  <div class="digit-row">
+    <div class="digit-block"><span id="days">00</span><label>🗓️</label></div>
+    <div class="digit-block"><span id="hours">00</span><label>⏰</label></div>
+    <div class="digit-block"><span id="minutes">00</span><label>🕒</label></div>
+    <div class="digit-block"><span id="seconds">00</span><label>⌛</label></div>
   </div>
 </div>
 
+<!-- DS-Digital Font -->
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
-  #countdownBox {
-    margin: 30px auto;
-    padding: 16px 24px;
-    max-width: 360px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  #digitalCountdown {
+    margin: 40px auto;
+    padding: 20px 28px;
+    max-width: 380px;
+    background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 20px;
     backdrop-filter: blur(14px);
     box-shadow: 0 0 20px rgba(0,0,0,0.4), inset 0 0 10px rgba(255,255,255,0.05);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Share Tech Mono', monospace;
     z-index: 1002;
     transition: transform 0.3s ease;
   }
-  #countdownBox:hover {
+  #digitalCountdown:hover {
     transform: scale(1.02);
   }
 
-  .countdownRow {
+  .digit-row {
     display: flex;
-    gap: 16px;
     justify-content: center;
+    gap: 16px;
   }
 
-  .segment {
-    background: rgba(0,0,0,0.4);
+  .digit-block {
+    background: rgba(0,0,0,0.5);
     padding: 12px 16px;
     border-radius: 12px;
-    min-width: 60px;
+    min-width: 64px;
     text-align: center;
     box-shadow: 0 0 10px rgba(255,255,255,0.1);
   }
 
-  .segment span {
+  .digit-block span {
     display: block;
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #00eaff;
-    text-shadow: 0 0 15px rgba(0,234,255,0.5);
+    text-shadow: 0 0 12px rgba(0,234,255,0.5);
   }
 
-  .segment div {
+  .digit-block label {
     font-size: 1.2rem;
     margin-top: 6px;
+    color: #f5c518;
   }
 
   @media (max-width: 480px) {
-    #countdownBox {
-      padding: 14px 18px;
+    #digitalCountdown {
+      padding: 16px 20px;
       max-width: 92%;
     }
-    .segment {
+    .digit-block {
       min-width: 52px;
       padding: 10px;
     }
-    .segment span {
-      font-size: 1.6rem;
+    .digit-block span {
+      font-size: 2rem;
     }
-    .segment div {
+    .digit-block label {
       font-size: 1rem;
     }
   }
@@ -901,7 +901,7 @@ body > .bee-page-container {padding-bottom:0 !important}
     const diff = eventDate - now;
 
     if (diff <= 0) {
-      document.getElementById("countdownBox").innerHTML = "<div style='font-size:2.2rem;'>🎉</div>";
+      document.getElementById("digitalCountdown").innerHTML = "<div style='font-size:2.4rem;text-align:center;'>🎉</div>";
       clearInterval(timerInterval);
       return;
     }
@@ -2906,6 +2906,7 @@ function filterEvents(searchTerm) {
 </body>
 
 </html>
+
 
 
 
