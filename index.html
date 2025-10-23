@@ -818,98 +818,99 @@ body > .bee-page-container {padding-bottom:0 !important}
 						<div class="parichay-logo">
 							<img alt="Parichay Logo" src="https://res.cloudinary.com/duslhfphv/image/upload/v1760205040/logo_final.png_COPY_2_RESIZED_dywpug.png" />
 						</div>
-<!-- Countdown Timer (Digital Clock Style) -->
-<div id="countdown-container">
-  <h2 class="countdown-title">⏳ Countdown to Parichay Fest 2025</h2>
+<!-- Compact Countdown Timer (Mobile-Friendly Box) -->
+<div id="countdown-box">
+  <h3 class="countdown-title">⏳ Parichay Fest 2025</h3>
   <div id="countdown">
-    <div class="time-box">
+    <div class="time-segment">
       <span id="days">00</span>
-      <p>Days</p>
+      <label>Days</label>
     </div>
-    <div class="time-box">
+    <div class="time-segment">
       <span id="hours">00</span>
-      <p>Hours</p>
+      <label>Hrs</label>
     </div>
-    <div class="time-box">
+    <div class="time-segment">
       <span id="minutes">00</span>
-      <p>Minutes</p>
+      <label>Min</label>
     </div>
-    <div class="time-box">
+    <div class="time-segment">
       <span id="seconds">00</span>
-      <p>Seconds</p>
+      <label>Sec</label>
     </div>
   </div>
 </div>
 
 <style>
-/* Countdown Clock Styling */
-#countdown-container {
+/* Compact Countdown Box Styling */
+#countdown-box {
+  margin: 20px auto;
+  padding: 14px 20px;
+  width: fit-content;
+  max-width: 90%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4), inset 0 0 10px rgba(255,255,255,0.05);
   text-align: center;
-  color: #fff;
+  color: white;
   font-family: 'Anton', sans-serif;
-  margin: 40px auto;
 }
 
 .countdown-title {
-  font-size: 2rem;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
   color: #f5c518;
-  margin-bottom: 20px;
-  text-shadow: 0 0 8px rgba(255,255,255,0.2);
+  text-shadow: 0 0 10px rgba(255,255,255,0.15);
 }
 
 #countdown {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
 
-.time-box {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255,255,255,0.3);
-  box-shadow: 0 0 20px rgba(255,255,255,0.1), inset 0 0 8px rgba(0,0,0,0.5);
-  border-radius: 14px;
-  padding: 20px 30px;
-  min-width: 90px;
-  backdrop-filter: blur(12px);
-  transition: all 0.3s ease;
+.time-segment {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 14px;
+  border-radius: 10px;
+  min-width: 60px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(255,255,255,0.1);
 }
 
-.time-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(255,255,255,0.2);
-}
-
-.time-box span {
+.time-segment span {
   display: block;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   color: #00eaff;
-  text-shadow: 0 0 20px rgba(0,234,255,0.6);
-  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(0,234,255,0.5);
 }
 
-.time-box p {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-top: 6px;
-  text-transform: uppercase;
+.time-segment label {
+  display: block;
+  font-size: 0.7rem;
   letter-spacing: 1px;
+  color: #ccc;
+  text-transform: uppercase;
 }
 
-/* Responsive */
+/* Mobile Friendly */
 @media (max-width: 600px) {
-  #countdown {
-    gap: 15px;
+  #countdown-box {
+    padding: 12px 14px;
+    width: 92%;
   }
-  .time-box {
-    padding: 14px 20px;
-    min-width: 70px;
+  .time-segment {
+    min-width: 52px;
+    padding: 8px;
   }
-  .time-box span {
-    font-size: 1.8rem;
+  .time-segment span {
+    font-size: 1.3rem;
   }
   .countdown-title {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
   }
 }
 </style>
@@ -921,7 +922,7 @@ function updateCountdown() {
   const diff = eventDate - now;
 
   if (diff <= 0) {
-    document.getElementById("countdown").innerHTML = "<h2>🎉 The Fest Has Begun!</h2>";
+    document.getElementById("countdown").innerHTML = "<h3>🎉 The Fest Has Begun!</h3>";
     clearInterval(timerInterval);
     return;
   }
@@ -940,6 +941,7 @@ function updateCountdown() {
 const timerInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
 </script>
+
 
 <!-- Points Table Trigger Button -->
 <div style="text-align:center; margin:20px 0; position: relative; z-index: 1001;">
@@ -2930,5 +2932,6 @@ function filterEvents(searchTerm) {
 </body>
 
 </html>
+
 
 
