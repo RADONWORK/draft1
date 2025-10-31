@@ -34,6 +34,29 @@
 <meta name="twitter:description" content="Join us for Parichay Fest 2025 at RNSIT! Featuring Group Dance, Nukkad Natak, and 30+ events. Register now and be part of the celebration.">
 <meta name="twitter:image" content="https://res.cloudinary.com/duslhfphv/image/upload/v1760205040/logo_final.png_COPY_2_RESIZED_dywpug.png">
 	<style>
+		.glass-button {
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1); /* fallback for unsupported backdrop-filter */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25),
+              inset 0 0 0 0.5px rgba(255,255,255,0.4);
+  transition: all 0.25s ease;
+  pointer-events: auto; /* ensure it's clickable */
+}
+.glass-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+.glass-button:active {
+  transform: scale(0.98);
+}
+
 @font-face {
   font-family: 'DS-Digital';
   src: url('/draft1/fonts/DS-DIGI.TTF') format('truetype');
@@ -3037,6 +3060,7 @@ function filterEvents(searchTerm) {
 </body>
 
 </html>
+
 
 
 
