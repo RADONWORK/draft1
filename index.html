@@ -999,6 +999,53 @@ body > .bee-page-container {padding-bottom:0 !important}
 
   </div>
 </div>
+						<!-- Points System Popup -->
+<div id="pointsSystemPopup" class="popup-overlay">
+  <div class="popup-content">
+    <h2>🌟 Parichay Points System</h2>
+    <div class="tagline">Events are divided into 5-Star, 3-Star, and 1-Star categories</div>
+
+    <div class="star-block">
+      <h3>5.0 ★★★★★</h3>
+      <table>
+        <tr><th>Position</th><th>Points</th></tr>
+        <tr><td>1st Place</td><td>30 Points</td></tr>
+        <tr><td>2nd Place</td><td>20 Points</td></tr>
+        <tr><td>3rd Place</td><td>10 Points</td></tr>
+      </table>
+    </div>
+
+    <div class="star-block">
+      <h3>3.0 ★★★</h3>
+      <table>
+        <tr><th>Position</th><th>Points</th></tr>
+        <tr><td>1st Place</td><td>20 Points</td></tr>
+        <tr><td>2nd Place</td><td>15 Points</td></tr>
+        <tr><td>3rd Place</td><td>10 Points</td></tr>
+      </table>
+    </div>
+
+    <div class="star-block">
+      <h3>1.0 ★</h3>
+      <table>
+        <tr><th>Position</th><th>Points</th></tr>
+        <tr><td>1st Place</td><td>10 Points</td></tr>
+        <tr><td>2nd Place</td><td>5 Points</td></tr>
+        <tr><td>3rd Place</td><td>2 Points</td></tr>
+      </table>
+    </div>
+
+    <div style="text-align:center; font-size:0.95rem; color:#f5c518; margin-top:1rem;">
+      Each cluster collects points from all the events they participate in.<br />
+      The cluster with the highest total points wins <strong>"The Rolling Trophy"</strong>.
+    </div>
+
+    <button class="close-btn" onclick="document.getElementById('pointsSystemPopup').classList.remove('active')">
+      Close
+    </button>
+  </div>
+</div>
+
 
 
 
@@ -3066,6 +3113,7 @@ function filterEvents(searchTerm) {
 </body>
 
 </html>
+
 
 
 
