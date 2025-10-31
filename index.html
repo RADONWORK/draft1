@@ -958,6 +958,70 @@ body > .bee-page-container {padding-bottom:0 !important}
   const timerInterval = setInterval(updateCountdown, 1000);
   updateCountdown();
 </script>
+						<!-- Buttons: Points Table + Points System -->
+<div style="text-align: center; margin: 40px 0;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+
+    <!-- Cluster Points Table Button -->
+    <a href="https://cluster-points.pages.dev/" target="_blank" rel="noopener noreferrer">
+      <button class="gradient-button">🏆 View Points Table</button>
+    </a>
+
+    <!-- Points System Button (Triggers Popup) -->
+    <button class="gradient-button" onclick="document.getElementById('pointsSystemPopup').classList.add('active')">
+      📊 View Points System
+    </button>
+
+  </div>
+</div>
+<!-- Points System Popup -->
+<div id="pointsSystemPopup" class="popup-overlay">
+  <div class="popup-content">
+    <h2>🌟 Parichay Points System</h2>
+    <div class="tagline">Events are divided into 5-Star, 3-Star, and 1-Star categories</div>
+
+    <!-- 5-Star -->
+    <div class="star-block">
+      <h3>5.0 ★★★★★</h3>
+      <table>
+        <tr><th>Position</th><th>Points</th></tr>
+        <tr><td>1st Place</td><td>30 Points</td></tr>
+        <tr><td>2nd Place</td><td>20 Points</td></tr>
+        <tr><td>3rd Place</td><td>10 Points</td></tr>
+      </table>
+    </div>
+
+    <!-- 3-Star -->
+    <div class="star-block">
+      <h3>3.0 ★★★☆☆</h3>
+      <table>
+        <tr><th>Position</th><th>Points</th></tr>
+        <tr><td>1st Place</td><td>20 Points</td></tr>
+        <tr><td>2nd Place</td><td>15 Points</td></tr>
+        <tr><td>3rd Place</td><td>10 Points</td></tr>
+      </table>
+    </div>
+
+    <!-- 1-Star -->
+    <div class="star-block">
+      <h3>1.0 ★☆☆☆☆</h3>
+      <table>
+        <tr><th>Position</th><th>Points</th></tr>
+        <tr><td>1st Place</td><td>15 Points</td></tr>
+        <tr><td>2nd Place</td><td>10 Points</td></tr>
+        <tr><td>3rd Place</td><td>5 Points</td></tr>
+      </table>
+    </div>
+
+    <div class="footer-note" style="text-align:center; font-size: 0.95rem; color: #f5c518; margin-top: 1rem;">
+      Each cluster collects points from all the events they participate in.<br />
+      The cluster with the highest total points wins <strong>"The Rolling Trophy"</strong>.
+    </div>
+
+    <button class="close-btn" onclick="document.getElementById('pointsSystemPopup').classList.remove('active')">Close</button>
+  </div>
+</div>
+
 <!-- Gradient-Animated Points Table Button -->
 <div style="text-align: center; margin: 40px 0;">
   <a href="https://cluster-points.pages.dev/" target="_blank" rel="noopener noreferrer">
@@ -2989,6 +3053,7 @@ function filterEvents(searchTerm) {
 </body>
 
 </html>
+
 
 
 
