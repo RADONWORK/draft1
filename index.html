@@ -958,12 +958,49 @@ body > .bee-page-container {padding-bottom:0 !important}
   const timerInterval = setInterval(updateCountdown, 1000);
   updateCountdown();
 </script>
-						<!-- Points Table Button -->
-<div style="text-align: center; margin: 30px 0;">
+<!-- Gradient-Animated Points Table Button -->
+<div style="text-align: center; margin: 40px 0;">
   <a href="https://cluster-points.pages.dev/" target="_blank" rel="noopener noreferrer">
-    <button class="glass-button">🏆 View Points Table</button>
+    <button class="gradient-button">🏆 View Points Table</button>
   </a>
 </div>
+
+<style>
+.gradient-button {
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(270deg, #7747FF, #f5c518, #00d4ff, #7747FF);
+  background-size: 600% 600%;
+  animation: gradientShift 6s ease infinite;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25),
+              inset 0 0 0 0.5px rgba(255,255,255,0.4);
+  transition: all 0.25s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.gradient-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3),
+              inset 0 0 0 0.5px rgba(255,255,255,0.5);
+}
+.gradient-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25),
+              inset 0 0 0 0.5px rgba(255,255,255,0.4);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>
+
 
 
 <!-- Search & Filter Bar -->
@@ -2952,6 +2989,7 @@ function filterEvents(searchTerm) {
 </body>
 
 </html>
+
 
 
 
