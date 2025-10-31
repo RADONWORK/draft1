@@ -34,29 +34,6 @@
 <meta name="twitter:description" content="Join us for Parichay Fest 2025 at RNSIT! Featuring Group Dance, Nukkad Natak, and 30+ events. Register now and be part of the celebration.">
 <meta name="twitter:image" content="https://res.cloudinary.com/duslhfphv/image/upload/v1760205040/logo_final.png_COPY_2_RESIZED_dywpug.png">
 	<style>
-		.glass-button {
-  padding: 0.9rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.1); /* fallback for unsupported backdrop-filter */
-  backdrop-filter: blur(12px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25),
-              inset 0 0 0 0.5px rgba(255,255,255,0.4);
-  transition: all 0.25s ease;
-  pointer-events: auto; /* ensure it's clickable */
-}
-.glass-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
-}
-.glass-button:active {
-  transform: scale(0.98);
-}
-
 @font-face {
   font-family: 'DS-Digital';
   src: url('/draft1/fonts/DS-DIGI.TTF') format('truetype');
@@ -980,16 +957,22 @@ body > .bee-page-container {padding-bottom:0 !important}
 
   const timerInterval = setInterval(updateCountdown, 1000);
   updateCountdown();
-</script><!-- Buttons Section -->
+</script>
+<!-- Buttons Section -->
 <div style="text-align: center; margin: 40px 0;">
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
     <!-- Cluster Points Table Button -->
-    <button class="gradient-button" onclick="document.getElementById('pointsPopup').classList.add('active')">
+    <button onclick="document.getElementById('pointsPopup').classList.add('active')"
+      style="padding: 0.9rem 2rem; font-size: 1rem; font-weight: 600; border: none; border-radius: 12px; cursor: pointer;
+             color: white; background: linear-gradient(270deg, #7747FF, #f5c518, #00d4ff); background-size: 600% 600%;
+             box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: all 0.25s ease;">
       🏆 View Points Table
     </button>
 
     <!-- Points System Button -->
-    <button class="glass-button" onclick="document.getElementById('pointsSystemPopup').classList.add('active')">
+    <button onclick="document.getElementById('pointsSystemPopup').classList.add('active')"
+      style="padding: 0.9rem 2rem; font-size: 1rem; font-weight: 600; border: none; border-radius: 12px; cursor: pointer;
+             color: #1a1a1a; background-color: #f5c518; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: all 0.25s ease;">
       📊 View Points System
     </button>
   </div>
@@ -3060,6 +3043,7 @@ function filterEvents(searchTerm) {
 </body>
 
 </html>
+
 
 
 
