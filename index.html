@@ -960,24 +960,46 @@ body > .bee-page-container {padding-bottom:0 !important}
 </script>
 <!-- Buttons Section -->
 <div style="text-align: center; margin: 40px 0; position: relative; z-index: 1001;">
-<div style="text-align: center; margin: 40px 0;">
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
-    <!-- Cluster Points Table Button -->
-    <button onclick="document.getElementById('pointsPopup').classList.add('active')"
-      style="padding: 0.9rem 2rem; font-size: 1rem; font-weight: 600; border: none; border-radius: 12px; cursor: pointer;
-             color: white; background: linear-gradient(270deg, #7747FF, #f5c518, #00d4ff); background-size: 600% 600%;
-             box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: all 0.25s ease;">
-      🏆 View Points Table
-    </button>
 
-    <!-- Points System Button -->
+    <!-- Cluster Points Table Button (Gradient Glow) -->
+    <a href="https://cluster-points.pages.dev/" target="_blank" rel="noopener noreferrer">
+      <button style="
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        color: #fff;
+        background: linear-gradient(135deg, #5e2eff, #f5c518);
+        box-shadow: 0 0 12px rgba(245, 197, 24, 0.6), 0 0 24px rgba(94, 46, 255, 0.4);
+        transition: all 0.3s ease;
+      ">
+        🏆 View Points Table
+      </button>
+    </a>
+
+    <!-- Points System Button (Teal Glow) -->
     <button onclick="document.getElementById('pointsSystemPopup').classList.add('active')"
-      style="padding: 0.9rem 2rem; font-size: 1rem; font-weight: 600; border: none; border-radius: 12px; cursor: pointer;
-             color: #1a1a1a; background-color: #f5c518; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: all 0.25s ease;">
+      style="
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        color: #fff;
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        box-shadow: 0 0 12px rgba(0, 198, 255, 0.6), 0 0 24px rgba(0, 114, 255, 0.4);
+        transition: all 0.3s ease;
+      ">
       📊 View Points System
     </button>
+
   </div>
 </div>
+
 
 
 <!-- Cluster Points Table Popup -->
@@ -3044,6 +3066,7 @@ function filterEvents(searchTerm) {
 </body>
 
 </html>
+
 
 
 
