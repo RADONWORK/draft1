@@ -958,29 +958,58 @@ body > .bee-page-container {padding-bottom:0 !important}
   const timerInterval = setInterval(updateCountdown, 1000);
   updateCountdown();
 </script>
-						<!-- Buttons: Points Table + Points System -->
+					<!-- Buttons Section -->
 <div style="text-align: center; margin: 40px 0;">
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
-
     <!-- Cluster Points Table Button -->
-    <a href="https://cluster-points.pages.dev/" target="_blank" rel="noopener noreferrer">
-      <button class="gradient-button">🏆 View Points Table</button>
-    </a>
-
-    <!-- Points System Button (Triggers Popup) -->
-    <button class="gradient-button" onclick="document.getElementById('pointsSystemPopup').classList.add('active')">
-      📊 View Points System
+    <button class="gradient-button" onclick="document.getElementById('pointsPopup').classList.add('active')">
+      🏆 View Points Table
     </button>
 
+    <!-- Points System Button -->
+    <button class="glass-button" onclick="document.getElementById('pointsSystemPopup').classList.add('active')">
+      📊 View Points System
+    </button>
   </div>
 </div>
+
+<!-- Cluster Points Table Popup -->
+<div id="pointsPopup" class="popup-overlay">
+  <div class="popup-content">
+    <h2>🏆 Cluster Points Table</h2>
+    <div class="tagline">Live standings across all events</div>
+
+    <div class="star-block">
+      <h3>Top 3 Clusters</h3>
+      <table>
+        <tr><th>Rank</th><th>Cluster</th><th>Points</th></tr>
+        <tr><td><span class="medal">🥇</span> 1</td><td>Cluster A</td><td>120</td></tr>
+        <tr><td><span class="medal">🥈</span> 2</td><td>Cluster B</td><td>110</td></tr>
+        <tr><td><span class="medal">🥉</span> 3</td><td>Cluster C</td><td>95</td></tr>
+      </table>
+    </div>
+
+    <div class="star-block">
+      <h3>All Clusters</h3>
+      <table>
+        <tr><th>Cluster</th><th>Points</th></tr>
+        <tr><td>Cluster D</td><td>88</td></tr>
+        <tr><td>Cluster E</td><td>76</td></tr>
+        <tr><td>Cluster F</td><td>64</td></tr>
+        <tr><td>Cluster G</td><td>52</td></tr>
+      </table>
+    </div>
+
+    <button class="close-btn" onclick="document.getElementById('pointsPopup').classList.remove('active')">Close</button>
+  </div>
+</div>
+
 <!-- Points System Popup -->
 <div id="pointsSystemPopup" class="popup-overlay">
   <div class="popup-content">
     <h2>🌟 Parichay Points System</h2>
     <div class="tagline">Events are divided into 5-Star, 3-Star, and 1-Star categories</div>
 
-    <!-- 5-Star -->
     <div class="star-block">
       <h3>5.0 ★★★★★</h3>
       <table>
@@ -991,7 +1020,6 @@ body > .bee-page-container {padding-bottom:0 !important}
       </table>
     </div>
 
-    <!-- 3-Star -->
     <div class="star-block">
       <h3>3.0 ★★★☆☆</h3>
       <table>
@@ -1002,7 +1030,6 @@ body > .bee-page-container {padding-bottom:0 !important}
       </table>
     </div>
 
-    <!-- 1-Star -->
     <div class="star-block">
       <h3>1.0 ★☆☆☆☆</h3>
       <table>
@@ -1021,49 +1048,6 @@ body > .bee-page-container {padding-bottom:0 !important}
     <button class="close-btn" onclick="document.getElementById('pointsSystemPopup').classList.remove('active')">Close</button>
   </div>
 </div>
-
-<!-- Gradient-Animated Points Table Button -->
-<div style="text-align: center; margin: 40px 0;">
-  <a href="https://cluster-points.pages.dev/" target="_blank" rel="noopener noreferrer">
-    <button class="gradient-button">🏆 View Points Table</button>
-  </a>
-</div>
-
-<style>
-.gradient-button {
-  padding: 0.9rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  color: #fff;
-  background: linear-gradient(270deg, #7747FF, #f5c518, #00d4ff, #7747FF);
-  background-size: 600% 600%;
-  animation: gradientShift 6s ease infinite;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25),
-              inset 0 0 0 0.5px rgba(255,255,255,0.4);
-  transition: all 0.25s ease;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-.gradient-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.3),
-              inset 0 0 0 0.5px rgba(255,255,255,0.5);
-}
-.gradient-button:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25),
-              inset 0 0 0 0.5px rgba(255,255,255,0.4);
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-</style>
 
 
 
@@ -3053,6 +3037,7 @@ function filterEvents(searchTerm) {
 </body>
 
 </html>
+
 
 
 
